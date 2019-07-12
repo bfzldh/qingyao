@@ -1,0 +1,77 @@
+---
+title: "Three Types of SS in R"
+author: "Qingyao"
+date: '2019-03-30'
+output: pdf_document
+series: ["Academy"]
+categories: ["Statistic"]
+tags: ["Regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about.
+Firstly, see type-1 SS, which is the default of R.
+Fit a regression:
+
+```{r}
+library(car)
+data(package = "carData")
+data(Ginzberg)
+head(Ginzberg)
+fit = lm(
+    depression ~ simplicity + fatalism, 
+    data = Ginzberg
+    )
+```
+
+Inspect anova of the regression, which is type-1 test.
+
+```{r}
+anova(fit)
+```
+
+Type-1 test is never advised, because...try to change the order of independent variables of this regression, and see the anvoa results again.
+
+```{r}
+fit = lm(
+    depression ~ fatalism + simplicity, 
+    data = Ginzberg)
+anova(fit)
+```
+
+Unbelievable! What did R give us? Acutually, the default anova is parallel to the hierachical regression which aims to determine the incremental contribution after controling for independent variables entered earlier. So the second line of F test controled for the independent variable of the first line, while the first line of F test controled for nothing! In other words, we can say that such a type-1 anova actually includes results of two different models: the first one with one independent variable, and the second one with two independent variiables. So type-i anova is also called sequential anova, which is useless for us in general. What we care is which independent variable is more powerful, but type-1 anova give us no such information. 
+Now, let's see type-2 tests based on type-2 SS. We can get type-2 SS and corresponding F tests with the Anova function in car package.
+
+```{r}
+Anova(fit, type = 2)
+Anova(fit, type = 3)
+```
+
+Compare three set of results above, we can see that each F in type-2 test controled for other independent variables.
+
+To fully understand what type-2 test does, we need to fit one interaction model, see:
+
+```{r}
+fit2 = lm(
+    depression ~ fatalism + simplicity + fatalism:simplicity, 
+    data = Ginzberg)
+Anova(fit2, type = 2)
+```
+
+Compare the type-2 and type-3 tests of fit2, we can see that for the main effects, the SS and MS are the same, but type-3 tests use smaller residuals to conduct F tests for the main effects. The residuals became smaller because the SS of interaction term was partialed out from residuals of fit1. So the main effects of independent variables are easier to reach significance level in test-3 anova. However, it's noteworthy that type-2 anova including the interaction actually still fit two models. The first model only indlude the two independent variables, and the second model additonally include the interaction term, and the F test of the interaction actually was based on the second model include three predictors. Such a combined anova table seems weird, but it's useful in practice. The first reason is that such a anova gives us informaton of main effects with more statistical power. The second reason is that this anova gives us the accurate test for the interaction. But again, we should be careful if we want to compare the contributions of these three predictors just as we usually do with SPSS, since the F tests of type-2 anova came from two different models and can not be compared directly.
+
+Now, you may conclude that type-1 anova and type-2 anova is different with the default anova of SPSS. Yes, you are right. The anova SPSS report in default is actually type-3 tests based on type-3 SS. In type-3 anova table, each F test the contribution of each predictor controling for the other two. Type-3 anova table is based on the same one statistical model including the two predictors and their interaction term. Note that type-3 anova was missleading since the effect for the first order term (the "main" effect) is actually not main effect. If you know moderation model, you should know that in such a model the so-called main effect is actually simple effect, that's why type-2 anova is encouraged. You may have known the way to get type-3 anova in R. Yes, use Anova function:
+
+```{r}
+Anova(fit2, type = 3)
+```
+
+Consider the following truth. If you can understand them, you have known the essence of type-2 and type-3 anova. When the model doesn't include the interaction term, type-2 anova and type-3 anova yield the same results. When the model does include the interaction term, type-2 anova and type-3 anova yield the same results for the interaction effect.
+
+In my opinion, the best way to examine the interaction effect and main effect is to fit two models seperately. Though in type-2 anova the main effect is easier to be significant, but this is a trick. So my suggestions is fit the interaction model first. If the interaction effect is not significant, remove it to get the main effect model and refit the model. 
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.

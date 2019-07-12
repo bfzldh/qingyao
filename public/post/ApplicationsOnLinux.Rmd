@@ -1,0 +1,119 @@
+---
+title: "心理学专业Linux应用清单"
+author: "Zhang Qingyao"
+date: "2019-06-22"
+output: html_document
+series: ["Linux"]
+categories: ["Application"]
+tags: ["Application","Software"]
+---
+以下应用（软件）可在[deepin](https://www.deepin.org/)操作系统上使用。其中大部分应用可从深度商店安装，但深度商店中的应用倾向于保守、版本普遍较旧。最新版应用可从相应网站下载、安装，但贸然使用最新版应用可能有导致系统崩溃的风险。
+
+# 心理学专业
+- 数据处理
+    - [R](https://www.r-project.org/)（建议自己编译安装最新版）
+    - [RStudio](https://www.rstudio.com/products/rstudio/download/)（使用dpkg命令安装最新版deb包）
+    - [Mplus](https://bbs.pinggu.org/forum-135-1.html)（使用PlayOnLinux安装windows版，也可直接使用Linux版）
+    - [SPSS 24](https://pan.baidu.com/s/1wOTI5J9MF-LCn4YsXDgMwg)（提取码:hlep）
+    - [JASP](https://jasp-stats.org/)（类似SPSS，统计功能较少）
+- 实验编程
+    - [PsychoPy](http://www.psychopy.org/)（配合[Anaconda](https://www.anaconda.com/)使用）
+    - [Python](https://www.python.org/)（deepin已经安装了Python，需要自己找一个顺手的IDE；亦可配合[Anaconda](https://www.anaconda.com/)使用）
+
+# 文本编辑器
+- 深度编辑器（支持代码语法高亮）
+
+# 办公
+- Office
+    - [WPS](https://www.wps.cn/product/wpslinux)
+    - [LibreOffice](https://www.libreoffice.org)（可以直接导出矢量图）
+- pdf编辑器
+    - [PDFsam basic](https://pdfsam.org/download-pdfsam-basic/)（页面剪接、排序）
+
+# 阅读
+- [福昕阅读器](https://www.foxitsoftware.cn/downloads/)（pdf文档，可添加多种批注）
+- caj阅读器（caj文档，wine版，可从应用商店安装）
+- 文档查看器（Evince，系统自带，可查看多种格式的文档）
+- [calibre](https://calibre-ebook.com/download_linux)（多种格式电子书的管理、阅读、格式转换）
+
+# 压缩
+- 深度管理器（自带压缩功能）
+- 360压缩（应用商店安装，或使用命令安装sudo apt install 360zip）
+
+# 输入法
+- 中州韵（可从[deepin论坛](https://bbs.deepin.org/)搜索安装方法）
+
+# 浏览器
+- Chrome
+- 360浏览器
+
+# 图像
+- [GIMP](https://www.gimp.org)（媲美Photoshop）
+- 深度截图（CTRL+ALT+A）
+- 深度看图
+
+# 视频
+- 深度录屏（适合录制短时小视频，无语音）
+- [OBS Studio](https://obsproject.com/wiki/install-instructions#linux)（适合录制课程视频）
+- 深度影院（本地播放）
+
+# 音乐播放
+- [网易云音乐](https://music.163.com/#/download)（在线，本地）
+- 深度音乐（本地）
+
+# 下载
+- [Motrix](https://motrix.app/)（替代迅雷，支持断点续传，适合下载大文件）
+
+# 网盘
+- [百度网盘](https://pan.baidu.com/download)
+
+# 即时通讯
+- [米聊](http://www.miliao.com)
+- [Skype](https://repo.skype.com/latest/skypeforlinux-64.deb)
+- 微信（wine版，从应用商店安装）
+- QQ，Tim（wine版，从应用商店安装）
+
+# 邮件客户端
+- 雷鸟客户端（从应用商店安装）
+
+# 科学上网（需自有shadowsocks帐号）
+- slectron-ssr（从应用商店安装）
+- [shadowsocks-deepin](https://github.com/lolimay/shadowsocks-deepin)
+
+# wine
+
+有些狭隘的软件有windows版，但没有Linux版，可使用wine安装该类软件，但未必可用。
+
+- PlayOnLinux（可从深度商店安装）
+
+# 虚拟机
+
+可使用虚拟机在deepin中安装windows系统，之后在windows系统中安装所需软件。
+
+- [Oracle VM VirtualBox](https://www.virtualbox.org/)
+
+# 其他深度全家桶
+- 深度文件管理器
+- 深度字体安装器
+- 深度取色器
+- 深度商店
+- 深度软件包管理器（应用安装）
+- 深度计算器
+- 深度终端（代码之下，智慧之上）
+- 深度系统监视器（任务管理器）
+- 深度录音
+- 深度启动盘制作工具（系统安装）
+- 深度安装器（系统安装）
+- 深度备份还原工具（系统备份）
+- 深度显卡驱动管理器（系统安装）
+- 深度系统修复工具（系统维护）
+- 深度远程协助（系统维护）
+- 深度帮助手册（系统维护）
+- 深度云打印
+- 深度云扫描
+- 深度开源字体
+- 深度日历
+- Deepin Emacs（代码编辑）
+- 深度演示助手（播放演示）
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。

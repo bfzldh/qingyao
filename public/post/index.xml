@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Revolutionary</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Revolutionary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright &amp;copy; 2019 Qingyao Zhang</copyright>
+    <lastBuildDate>Thu, 27 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>人际和谐调查2019</title>
+      <link>/post/survey/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/survey/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>心理学专业Linux应用清单</title>
+      <link>/post/applicationsonlinux/</link>
+      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/applicationsonlinux/</guid>
+      <description>以下应用（软件）可在deepin操作系统上使用。其中大部分应用可从深度商店安装，但深度商店中的应用倾向于保守、版本普遍较旧。最新版应用可从相应网站下载、安装，但贸然使用最新版应用可能有导致系统崩溃的风险。
+心理学专业  数据处理  R（建议自己编译安装最新版） RStudio（使用dpkg命令安装最新版deb包） Mplus（使用PlayOnLinux安装windows版，也可直接使用Linux版） SPSS 24（提取码:hlep） JASP（类似SPSS，统计功能较少）  实验编程  PsychoPy（配合Anaconda使用） Python（deepin已经安装了Python，需要自己找一个顺手的IDE；亦可配合Anaconda使用）    文本编辑器  深度编辑器（支持代码语法高亮）   办公  Office  WPS LibreOffice（可以直接导出矢量图）  pdf编辑器  PDFsam basic（页面剪接、排序）    阅读  Mendeley(文献管理) 福昕阅读器（pdf文档，可添加多种批注） caj阅读器（caj文档，wine版，可从应用商店安装） 文档查看器（Evince，系统自带，可查看多种格式的文档） calibre（多种格式电子书的管理、阅读、格式转换）   压缩  深度管理器（自带压缩功能） 360压缩（应用商店安装，或使用命令安装sudo apt install 360zip）   输入法  中州韵（可从deepin论坛搜索安装方法）   浏览器  Chrome 360浏览器   图像  GIMP（媲美Photoshop） 深度截图（CTRL+ALT+A） 深度看图   视频  深度录屏（适合录制短时小视频，无语音） OBS Studio（适合录制课程视频） 深度影院（本地播放）   音乐播放  网易云音乐（在线，本地） 深度音乐（本地）   下载  Motrix（替代迅雷，支持断点续传，适合下载大文件）   网盘  百度网盘   即时通讯  米聊 Skype 微信（wine版，从应用商店安装） QQ，Tim（wine版，从应用商店安装）   邮件客户端  雷鸟客户端（从应用商店安装）   科学上网（需自有shadowsocks帐号）  slectron-ssr（从应用商店安装） shadowsocks-deepin   wine 有些狭隘的软件有windows版，但没有Linux版，可使用wine安装该类软件，但未必可用。</description>
+    </item>
+    
+    <item>
+      <title>我的祖国</title>
+      <link>/post/mymotherland/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/mymotherland/</guid>
+      <description>  一条大河波浪宽, 风吹稻花香两岸
+我家就在岸上住
+听惯了艄公的号子, 看惯了船上的白帆
+这是美丽的祖国, 是我生长的地方
+在这片辽阔的土地上, 到处都有明媚的风光
+姑娘好象花儿一样, 小伙儿心胸多宽广
+为了开辟新天地
+唤醒了沉睡的高山, 让那河流改变了模样
+这是英雄的祖国, 是我生长的地方
+在这片古老的土地上, 到处都有青春的力量
+好山好水好地方, 条条大路都宽敞
+朋友来了有好酒
+若是那豺狼来了, 迎接它的有猎枪
+这是强大的祖国, 是我生长的地方
+在这片温暖的土地上, 到处都有和平的阳光  </description>
+    </item>
+    
+    <item>
+      <title>向天再借五百年</title>
+      <link>/post/%E5%90%91%E5%A4%A9%E5%86%8D%E5%80%9F%E4%BA%94%E7%99%BE%E5%B9%B4/</link>
+      <pubDate>Thu, 23 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/%E5%90%91%E5%A4%A9%E5%86%8D%E5%80%9F%E4%BA%94%E7%99%BE%E5%B9%B4/</guid>
+      <description>  沿着江山起起伏伏温柔的曲线
+放马爱的中原爱的北国和江南
+面对冰刀雪剑风雨多情的陪伴
+珍惜苍天赐给我的金色的华年
+做人一地肝胆 做人何惧艰险
+豪情不变 年复一年
+做人有苦有甜 善恶分开两边
+都为梦中的明天
+看铁蹄铮铮 踏遍万里河山
+我站在风口浪尖 紧握住日月旋转
+愿烟火人间 安得太平美满
+我真的还想再活五百年  </description>
+    </item>
+    
+    <item>
+      <title>Ten</title>
+      <link>/post/ten/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ten/</guid>
+      <description>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</description>
+    </item>
+    
+    <item>
+      <title>Three Types of SS in R</title>
+      <link>/post/2019-03-30-three-types-of-ss/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-03-30-three-types-of-ss/</guid>
+      <description>To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about. Firstly, see type-1 SS, which is the default of R. Fit a regression:
+library(car) data(package = &amp;quot;carData&amp;quot;) data(Ginzberg) head(Ginzberg) ## simplicity fatalism depression adjsimp adjfatal adjdep ## 1 0.92983 0.35589 0.59870 0.75934 0.10673 0.41865 ## 2 0.91097 1.18439 0.</description>
+    </item>
+    
+  </channel>
+</rss>

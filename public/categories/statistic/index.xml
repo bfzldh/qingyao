@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistic on Revolutionary</title>
+    <link>/categories/statistic/</link>
+    <description>Recent content in Statistic on Revolutionary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright &amp;copy; 2019 Qingyao Zhang</copyright>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/statistic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Three Types of SS in R</title>
+      <link>/post/2019-03-30-three-types-of-ss/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-03-30-three-types-of-ss/</guid>
+      <description>To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about. Firstly, see type-1 SS, which is the default of R. Fit a regression:
+library(car) data(package = &amp;quot;carData&amp;quot;) data(Ginzberg) head(Ginzberg) ## simplicity fatalism depression adjsimp adjfatal adjdep ## 1 0.92983 0.35589 0.59870 0.75934 0.10673 0.41865 ## 2 0.91097 1.18439 0.</description>
+    </item>
+    
+  </channel>
+</rss>

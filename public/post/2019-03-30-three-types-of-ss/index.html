@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Three Types of SS in R - Revolutionary</title>
+  <meta property="og:title" content="Three Types of SS in R - Revolutionary" />
+  <meta name="twitter:title" content="Three Types of SS in R - Revolutionary" />
+  <meta name="description" content="To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about. Firstly, see type-1 SS, which is the default of R. Fit a regression:
+library(car) data(package = &quot;carData&quot;) data(Ginzberg) head(Ginzberg) ## simplicity fatalism depression adjsimp adjfatal adjdep ## 1 0.92983 0.35589 0.59870 0.75934 0.10673 0.41865 ## 2 0.91097 1.18439 0.">
+  <meta property="og:description" content="To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about. Firstly, see type-1 SS, which is the default of R. Fit a regression:
+library(car) data(package = &quot;carData&quot;) data(Ginzberg) head(Ginzberg) ## simplicity fatalism depression adjsimp adjfatal adjdep ## 1 0.92983 0.35589 0.59870 0.75934 0.10673 0.41865 ## 2 0.91097 1.18439 0.">
+  <meta name="twitter:description" content="To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about. Firstly, see …">
+  <meta name="author" content="Qingyao Zhang"/>
+  <meta property="og:site_name" content="Revolutionary" />
+  <meta property="og:url" content="/post/2019-03-30-three-types-of-ss/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.55.6" />
+
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/js/fontawesome.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">Revolutionary</a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-series"><a href="/series/" title="Series">Series</a></li>
+      <li class="site-navi-item-categories"><a href="/categories/" title="Categories">Categories</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="Tags">Tags</a></li>
+      <li class="site-navi-item-about"><a href="/about/" title="About">About</a></li>
+      <li class="site-navi-item-archives"><a href="/archives/" title="Archives">Archives</a></li>
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+  <div class="main" role="main">
+    <article class="article">
+      
+      <p class="article-title-series"><a href="/series/academy/">Academy</a>&nbsp;/</p>
+      <h1 class="article-title">Three Types of SS in R</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>2019-03-19</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/statistic/">
+            <i class="fas fa-folder"></i>
+            Statistic
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/regression/">
+            <i class="fas fa-tag"></i>
+            Regression
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+<aside class="toc">
+  
+</aside>
+      
+
+
+<p>To learn the following topic, you are supposed to have a good knowledge of regression and moderation analysis. If not, you may have difficulties in understanding what I am talking about.
+Firstly, see type-1 SS, which is the default of R.
+Fit a regression:</p>
+<pre class="r"><code>library(car)
+data(package = &quot;carData&quot;)
+data(Ginzberg)
+head(Ginzberg)</code></pre>
+<pre><code>##   simplicity fatalism depression adjsimp adjfatal  adjdep
+## 1    0.92983  0.35589    0.59870 0.75934  0.10673 0.41865
+## 2    0.91097  1.18439    0.72787 0.72717  0.99915 0.51688
+## 3    0.53366 -0.05837    0.53411 0.62176  0.03811 0.70699
+## 4    0.74118  0.35589    0.56641 0.83522  0.42218 0.65639
+## 5    0.53366  0.77014    0.50182 0.47697  0.81423 0.53518
+## 6    0.62799  1.39152    0.56641 0.40664  1.23261 0.34042</code></pre>
+<pre class="r"><code>fit = lm(
+    depression ~ simplicity + fatalism, 
+    data = Ginzberg
+    )</code></pre>
+<p>Inspect anova of the regression, which is type-1 test.</p>
+<pre class="r"><code>anova(fit)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: depression
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## simplicity  1 8.3793  8.3793  67.930 2.942e-12 ***
+## fatalism    1 2.1259  2.1259  17.234 8.282e-05 ***
+## Residuals  79 9.7448  0.1234                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Type-1 test is never advised, because…try to change the order of independent variables of this regression, and see the anvoa results again.</p>
+<pre class="r"><code>fit = lm(
+    depression ~ fatalism + simplicity, 
+    data = Ginzberg)
+anova(fit)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: depression
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## fatalism    1 8.7507  8.7507  70.940 1.306e-12 ***
+## simplicity  1 1.7545  1.7545  14.223  0.000312 ***
+## Residuals  79 9.7448  0.1234                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Unbelievable! What did R give us? Acutually, the default anova is parallel to the hierachical regression which aims to determine the incremental contribution after controling for independent variables entered earlier. So the second line of F test controled for the independent variable of the first line, while the first line of F test controled for nothing! In other words, we can say that such a type-1 anova actually includes results of two different models: the first one with one independent variable, and the second one with two independent variiables. So type-i anova is also called sequential anova, which is useless for us in general. What we care is which independent variable is more powerful, but type-1 anova give us no such information.
+Now, let’s see type-2 tests based on type-2 SS. We can get type-2 SS and corresponding F tests with the Anova function in car package.</p>
+<pre class="r"><code>Anova(fit, type = 2)</code></pre>
+<pre><code>## Anova Table (Type II tests)
+## 
+## Response: depression
+##            Sum Sq Df F value    Pr(&gt;F)    
+## fatalism   2.1259  1  17.234 8.282e-05 ***
+## simplicity 1.7545  1  14.223  0.000312 ***
+## Residuals  9.7448 79                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>Anova(fit, type = 3)</code></pre>
+<pre><code>## Anova Table (Type III tests)
+## 
+## Response: depression
+##             Sum Sq Df F value    Pr(&gt;F)    
+## (Intercept) 0.5648  1  4.5789  0.035455 *  
+## fatalism    2.1259  1 17.2340 8.282e-05 ***
+## simplicity  1.7545  1 14.2233  0.000312 ***
+## Residuals   9.7448 79                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Compare three set of results above, we can see that each F in type-2 test controled for other independent variables.</p>
+<p>To fully understand what type-2 test does, we need to fit one interaction model, see:</p>
+<pre class="r"><code>fit2 = lm(
+    depression ~ fatalism + simplicity + fatalism:simplicity, 
+    data = Ginzberg)
+Anova(fit2, type = 2)</code></pre>
+<pre><code>## Anova Table (Type II tests)
+## 
+## Response: depression
+##                     Sum Sq Df F value    Pr(&gt;F)    
+## fatalism            2.1259  1 18.9125 4.093e-05 ***
+## simplicity          1.7545  1 15.6086 0.0001698 ***
+## fatalism:simplicity 0.9773  1  8.6945 0.0042099 ** 
+## Residuals           8.7675 78                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Compare the type-2 and type-3 tests of fit2, we can see that for the main effects, the SS and MS are the same, but type-3 tests use smaller residuals to conduct F tests for the main effects. The residuals became smaller because the SS of interaction term was partialed out from residuals of fit1. So the main effects of independent variables are easier to reach significance level in test-3 anova. However, it’s noteworthy that type-2 anova including the interaction actually still fit two models. The first model only indlude the two independent variables, and the second model additonally include the interaction term, and the F test of the interaction actually was based on the second model include three predictors. Such a combined anova table seems weird, but it’s useful in practice. The first reason is that such a anova gives us informaton of main effects with more statistical power. The second reason is that this anova gives us the accurate test for the interaction. But again, we should be careful if we want to compare the contributions of these three predictors just as we usually do with SPSS, since the F tests of type-2 anova came from two different models and can not be compared directly.</p>
+<p>Now, you may conclude that type-1 anova and type-2 anova is different with the default anova of SPSS. Yes, you are right. The anova SPSS report in default is actually type-3 tests based on type-3 SS. In type-3 anova table, each F test the contribution of each predictor controling for the other two. Type-3 anova table is based on the same one statistical model including the two predictors and their interaction term. Note that type-3 anova was missleading since the effect for the first order term (the “main” effect) is actually not main effect. If you know moderation model, you should know that in such a model the so-called main effect is actually simple effect, that’s why type-2 anova is encouraged. You may have known the way to get type-3 anova in R. Yes, use Anova function:</p>
+<pre class="r"><code>Anova(fit2, type = 3)</code></pre>
+<pre><code>## Anova Table (Type III tests)
+## 
+## Response: depression
+##                     Sum Sq Df F value    Pr(&gt;F)    
+## (Intercept)         0.2679  1  2.3837   0.12665    
+## fatalism            2.7011  1 24.0303 5.053e-06 ***
+## simplicity          2.1942  1 19.5205 3.171e-05 ***
+## fatalism:simplicity 0.9773  1  8.6945   0.00421 ** 
+## Residuals           8.7675 78                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Consider the following truth. If you can understand them, you have known the essence of type-2 and type-3 anova. When the model doesn’t include the interaction term, type-2 anova and type-3 anova yield the same results. When the model does include the interaction term, type-2 anova and type-3 anova yield the same results for the interaction effect.</p>
+<p>In my opinion, the best way to examine the interaction effect and main effect is to fit two models seperately. Though in type-2 anova the main effect is easier to be significant, but this is a trick. So my suggestions is fit the interaction model first. If the interaction effect is not significant, remove it to get the main effect model and refit the model.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+
+    </article>
+    <section class="article-series">
+      <h2 class="series-title"><a href="/series/academy/"><i class="fas fa-book"></i>&nbsp;Academy</a></h2>
+      <ol reversed="reversed" class="series">
+        <li><a href="/post/survey/">人际和谐调查2019</a></li>
+        <li><a href="/post/ten/">Ten</a></li>
+        <li class="active">Three Types of SS in R</li>
+      </ol>
+    </section>
+
+    
+
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/post/ten/" data-toggle="tooltip" data-placement="top" title="Ten">&lt; Newer</a>
+      </li>
+      <li class="pager-older pager-noitem">Older &gt;</li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright">Copyright &copy; 2019 Qingyao Zhang</div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-about"><a href="/about/" title="About">About</a></li>
+  </ul>
+  <div class="powerdby">
+    Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/taikii/whiteplain">Whiteplain</a>
+  </div>
+</div>
+
+
+</body>
+</html>

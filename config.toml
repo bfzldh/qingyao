@@ -1,0 +1,101 @@
+baseurl = "https://qingyao.com/"
+title = "Revolutionary"
+# themesDir = "../../"
+theme = "whiteplain"
+languageCode = "en"
+# Disqus shortname
+#disqusShortname = ""
+# google analytics tracking id
+#googleAnalytics = ""
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
+# Copyright notice. This is displayer in the footer.
+copyright = "Copyright &copy; 2019 Qingyao Zhang"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[params]
+  # useCDN = false
+   showShareIcons = false
+  # Date format
+  dateFormat = "2006-01-06"
+  # Put images/favicon.ico file
+  #favicon = "images/favicon.ico"
+
+# This is displayer in About page.
+[params.author]
+  name = "Qingyao Zhang"
+
+  # Gravatar or Abatar image
+  #gravatar = "Gravatar email or MD5 Hash"
+  avatar = "/about/cat.png"
+
+  #twitter = "Twitter username"
+  #facebook = "Facebook username"
+  #googleplus = "Googleplus username"
+  #instagram = "Instagram username"
+  #tumblr = "Tumblr username"
+  #flickr = "Flickr username"
+  #reddit = "Reddit username"
+  #linkedin = "Linkedin username"
+  #slideshare = "Slideshare username"
+  #github = "Github username"
+  #gitlab = "Gitlab username"
+  #bitbucket = "Bitbucket username"
+  #stackoverflow = "Stackoverflow username"
+  #jsfiddle = "Jsfiddle username"
+  #codepen = "Codepen username"
+  #deviantart = "Deviantart username"
+  #behance = "Behance username"
+  #dribbble = "Dribbble username"
+  #wordpress = "Wordpress username"
+  #medium = "Medium username"
+  #foursquare = "Foursquare username"
+  #xing = "Xing username"
+  #quora = "Quora username"
+  #youtube = "Youtube username"
+  #vimeo = "Vimeo username"
+  #whatsapp = "Whatsapp username"
+  #skype = "Skype username"
+  #snapchat = "Snapchat username"
+  #pinterest = "Pinterest username"
+  #telegram = "Telegram username"
+  #vine = "Vine username"
+  email = "qingyaozhang@outlook.com"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+[[menu.main]]
+  name = "Series"
+  weight = 1
+  identifier = "series"
+  url = "/series/"
+[[menu.main]]
+  name = "Categories"
+  weight = 2
+  identifier = "categories"
+  url = "/categories/"
+[[menu.main]]
+  name = "Tags"
+  weight = 3
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "Archives"
+  weight = 4
+  identifier = "archives"
+  url = "/archives/"
+[[menu.main]]
+  name = "About"
+  weight = 4
+  identifier = "about"
+  url = "/about/"
+
+[[menu.footer]]
+  name = "About"
+  weight = 1
+  identifier = "about"
+  url = "/about/"
