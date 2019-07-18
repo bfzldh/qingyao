@@ -12,7 +12,7 @@ tags: ["Application","Software"]
 # 心理学专业
 - 数据处理
     - [EpiData](http://www.epidata.dk/)（完善地数据录入功能，简单的统计功能，deepin上对中文的支持不友好）
-    - [RevMan 5]()（元分析软件，依赖于java1.6或1.7）
+    - [RevMan 5](https://community.cochrane.org/help/tools-and-software/revman-5)（元分析软件，依赖于java1.6或1.7）
     - [R](https://www.r-project.org/)（建议自己编译安装最新版）
     - [RStudio](https://www.rstudio.com/products/rstudio/download/)（使用dpkg命令安装最新版deb包）
     - [Mplus](https://bbs.pinggu.org/forum-135-1.html)（使用PlayOnLinux安装windows版，也可直接使用Linux版）
