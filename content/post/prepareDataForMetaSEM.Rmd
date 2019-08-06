@@ -12,7 +12,7 @@ tags: ["R","metaSEM"]
 knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
 tssem1 function in [metaSEM](https://github.com/mikewlcheung/metasem) package uses a list data, which includes a "son" list of covariance matrix and a vector of sample size (maybe also another vector of cluster). This data format differs a lot from the wide format we used usually. In the wide format data, one row includes information for one study, hence I arrange the correlations in a matrix (usually one matrix for one study) from top to down and from left to right successively in a row. In the manual of metaSEM package, Cheung calls this kind of layout of matrix a "stacked matrix". The question is, how can I transform such stacked matrix into the list needed for meta-analytic analysis (i.e., tssem1 function) ? In this article, I write one function to do such work.
-Firstly, let's have a look at the data used by tssem1 function.
+Firstly, let's have a look at the data used by `tssem1` function.
 ```{r}
 library(metaSEM)
 data(Cheung09)
@@ -28,12 +28,12 @@ stackeData
 ```
 Now you can use the function below. Note that the orders of the covariances in data frame must be consistent with the order `vec2symMat` function fills the matrix. That's from top to down and from left to right. This function has 6 arguments.
 
-- dataFrame = the data frame including all data or information. 
-- ncol = the column number including the sample size.
-- studyNameCol = the number of the colume including study names or study IDs.
-- fromCol = the number of the start column to read the stacked matrix (i.e., a series of covariances/correlations).
-- to Col = the number of the end column to read the stacked matrix.
-- dimNamesVector = the dimension names of the covariance matrices. Again, the order should be consistent with the matrix.
+- `dataFrame` = the data frame including all data or information. 
+- `nCol` = the column number including the sample size.
+- `studyNameCol` = the number of the colume including study names or study IDs.
+- `fromCol` = the number of the start column to read the stacked matrix (i.e., a series of covariances/correlations).
+- `toCol` = the number of the end column to read the stacked matrix.
+- `dimNamesVector` = the dimension names of the covariance matrices. Again, the order should be consistent with the matrix.
 
 Now, run the following syntax to define the function `create_metaSEM_data` function before you use it. 
 ``` {r}
