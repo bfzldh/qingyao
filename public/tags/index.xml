@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Psych</title>
+    <title>Tags on Psych</title>
     <link>/tags/</link>
-    <description>Recent content on Psych</description>
+    <description>Recent content in Tags on Psych</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright &amp;copy; 2019 Qingyao Zhang</copyright>
@@ -13,16 +13,20 @@
     
     
     <item>
-      <title>Ten</title>
-      <link>/post/ten/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>/tags/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ten/</guid>
-      <description>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</description>
+      <guid>/tags/</guid>
+      <description></description>
     </item>
     
-  </channel>
-</rss>     <guid>/tags/r/</guid>
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     

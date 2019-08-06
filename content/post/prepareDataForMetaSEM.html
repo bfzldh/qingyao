@@ -10,18 +10,10 @@ tags: ["R","metaSEM"]
 
 
 
-<p>tssem1 function in <a href="https://github.com/mikewlcheung/metasem">metaSEM</a> package uses a list data, which includes a “son” list of covariance matrix and a vector of sample size. This data format differs a lot from the wide format we used usually. In the wide format data, one row includes information for one study, hence I save the correlations in a matrix (usually one matrix for one study) successively in a row. In the manual of metaSEM package, Cheung calls this matrix in a row “stacked matrix”. The question is, how can I transform such data into the list needed for meta-analytic analysis (i.e., tssem1 function) ? In this article, I write one function to do such work.
+<p>tssem1 function in <a href="https://github.com/mikewlcheung/metasem">metaSEM</a> package uses a list data, which includes a “son” list of covariance matrix and a vector of sample size (maybe also another vector of cluster). This data format differs a lot from the wide format we used usually. In the wide format data, one row includes information for one study, hence I arrange the correlations in a matrix (usually one matrix for one study) from top to down and from left to right successively in a row. In the manual of metaSEM package, Cheung calls this kind of layout of matrix a “stacked matrix”. The question is, how can I transform such stacked matrix into the list needed for meta-analytic analysis (i.e., tssem1 function) ? In this article, I write one function to do such work.
 Firstly, let’s have a look at the data used by tssem1 function.</p>
-<pre class="r"><code>library(metaSEM)</code></pre>
-<pre><code>## 载入需要的程辑包：OpenMx</code></pre>
-<pre><code>## To take full advantage of multiple cores, use:
-##   mxOption(key=&#39;Number of Threads&#39;, value=parallel::detectCores()) #now
-##   Sys.setenv(OMP_NUM_THREADS=parallel::detectCores()) #before library(OpenMx)</code></pre>
-<pre><code>## &quot;SLSQP&quot; is set as the default optimizer in OpenMx.</code></pre>
-<pre><code>## mxOption(NULL, &quot;Gradient algorithm&quot;) is set at &quot;central&quot;.</code></pre>
-<pre><code>## mxOption(NULL, &quot;Optimality tolerance&quot;) is set at &quot;6.3e-14&quot;.</code></pre>
-<pre><code>## mxOption(NULL, &quot;Gradient iterations&quot;) is set at &quot;2&quot;.</code></pre>
-<pre class="r"><code>data(Cheung09)
+<pre class="r"><code>library(metaSEM)
+data(Cheung09)
 Cheung09</code></pre>
 <pre><code>## $data
 ## $data$`1`
@@ -121,13 +113,16 @@ stackeData</code></pre>
 ## 2 656    study2
 ## 3 832    study3
 ## 4 823    study4</code></pre>
-<p>Now you can use the function below. Note that the orders of the covariances in data frame must be consistent with the order <code>vec2symMat</code> function fills the matrix. This function has 6 arguments.
-- dataFrame = the data frame include all data or information.
-- ncol = the column number of the sample size variable.
-- studyNameCol = the number of the colume includes study names or study IDs.
-- fromCol = the number of the start column to read the stacked matrix (i.e., a number of covariances).
-- to Col = the number of the end column to read the stacked matrix.
-- dimNamesVector = the colume (or row) names of the covariance matrices. Again, the order should be consistent with the real matrix.</p>
+<p>Now you can use the function below. Note that the orders of the covariances in data frame must be consistent with the order <code>vec2symMat</code> function fills the matrix. That’s from top to down and from left to right. This function has 6 arguments.</p>
+<ul>
+<li>dataFrame = the data frame including all data or information.</li>
+<li>ncol = the column number including the sample size.</li>
+<li>studyNameCol = the number of the colume including study names or study IDs.</li>
+<li>fromCol = the number of the start column to read the stacked matrix (i.e., a series of covariances/correlations).</li>
+<li>to Col = the number of the end column to read the stacked matrix.</li>
+<li>dimNamesVector = the dimension names of the covariance matrices. Again, the order should be consistent with the matrix.</li>
+</ul>
+<p>Now, run the following syntax to define the function <code>create_metaSEM_data</code> function before you use it.</p>
 <pre class="r"><code># Define a function to prepare data for metaSEM.
 create_metaSEM_data &lt;-
   function (dataFrame,
@@ -153,7 +148,7 @@ create_metaSEM_data &lt;-
     }
     return(list(cor_matrix_list = cor_matrix_list, cor_n = cor_n))
   }</code></pre>
-<p>Run the function before we use it. Now, we convert <code>stackeData</code> back to the list.</p>
+<p>Then, have a try to convert <code>stackeData</code> back to the list.</p>
 <pre class="r"><code>names(stackeData) # To find the column number.</code></pre>
 <pre><code>##  [1] &quot;x1_x1&quot;     &quot;x2_x1&quot;     &quot;x3_x1&quot;     &quot;x4_x1&quot;     &quot;x5_x1&quot;    
 ##  [6] &quot;x6_x1&quot;     &quot;x7_x1&quot;     &quot;x8_x1&quot;     &quot;x9_x1&quot;     &quot;x2_x2&quot;    
@@ -235,7 +230,7 @@ semData</code></pre>
 ## $cor_n
 ## study1 study2 study3 study4 
 ##    591    656    832    823</code></pre>
-<p>In your owe work, you must prepare a data frame that fits <code>create_metaSEM_data</code> function, indicating that the stacked matrix must be column-directed (from top to down, from left to right) lower triangle of the matrix including the diagonals. Another thing you should keep in mind is that the covariances/correlations of the missing variables must be kept empty. For example, if variable x2 is missing, the diagonal for x2 in a correlation matrix should be kept empty, even we know it’s always 1. We keep it empty to tell <code>is.pd</code> function this variable is missing. Otherwise, you are not able to convert the data to a list is your matrices include missing values.
-Note that I add one “check” step<br />
-Enjoy it!
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
+<p>In your own work, you must prepare a data frame that fits <code>create_metaSEM_data</code> function, indicating that the stacked matrix must be a column-directed (from top to down, from left to right) lower triangle of the matrix including the diagonals.</p>
+<p>Another thing you should keep in mind is that the covariances/correlations of the missing variables <strong>must be kept empty</strong>. For example, there are three elements for the correlation matrix of x1 and x2. If variable x2 is missing, the x1_x2 correlation and x2_x2 correlation should both be kept empty, even though we know x2_x2 correlation is always 1. We keep it empty to tell R this variable is missing. Otherwise, <code>tssem1</code> function will treat such a matrix as an incomplete matrix and will give an error, since if x2_x2 correlation exist, x1_x2 should exist too. In other words, <code>tssem1</code> allows missing variables, but does not allow incomplete matrices. I have added one step in <code>create_metaSEM_data</code> function using <code>is.pd</code> function to check whether each matrix is incomplete. If the matrix is incomplete, it will not be included in the created list, and the the corresponding study name will be shown to you for your further inspection.</p>
+<p>Hope this function can help you.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
