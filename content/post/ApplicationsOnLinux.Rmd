@@ -81,7 +81,7 @@ tags: ["Application","Software"]
 - 雷鸟客户端（从应用商店安装）
 
 # 科学上网（需自有shadowsocks帐号）
-- slectron-ssr（从应用商店安装）
+- electron-ssr（从应用商店安装）
 - [shadowsocks-deepin](https://github.com/lolimay/shadowsocks-deepin)
 
 # wine
