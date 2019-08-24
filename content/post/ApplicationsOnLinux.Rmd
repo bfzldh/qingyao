@@ -33,6 +33,7 @@ tags: ["Application","Software"]
     - [PDFsam basic](https://pdfsam.org/download-pdfsam-basic/)（页面剪接、排序）
 
 # 阅读
+- [ydict](https://github.com/TimothyYe/ydict)(使用命令行操作的有道在线词典)
 - [Mendeley](https://www.mendeley.com/download-desktop/)(文献管理)
 - [福昕阅读器](https://www.foxitsoftware.cn/downloads/)（pdf文档，可添加多种批注）
 - caj阅读器（caj文档，wine版，可从应用商店安装）
