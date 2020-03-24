@@ -72,6 +72,7 @@ tags: ["Application","Software"]
 - [百度网盘](https://pan.baidu.com/download)
 
 # 即时通讯
+- [zoom](https://zoom.com.cn/download) (远程开会、讲课、听课)
 - [米聊](http://www.miliao.com)
 - [Skype](https://repo.skype.com/latest/skypeforlinux-64.deb)
 - 微信（wine版，从应用商店安装）
