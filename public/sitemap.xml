@@ -4,20 +4,73 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/application/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/application/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/series/linux/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/software/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/applicationsonlinux/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -34,30 +87,6 @@
   
   <url>
     <loc>/categories/poem/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/series/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -134,35 +163,6 @@
   <url>
     <loc>/post/survey/</loc>
     <lastmod>2019-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/application/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/application/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/series/linux/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/software/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/applicationsonlinux/</loc>
-    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>

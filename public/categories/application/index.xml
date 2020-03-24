@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright &amp;copy; 2019 Qingyao Zhang</copyright>
-    <lastBuildDate>Sat, 22 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/application/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>心理学专业Linux应用清单</title>
       <link>/post/applicationsonlinux/</link>
-      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/applicationsonlinux/</guid>
       <description>以下应用（软件）可在deepin操作系统上使用。其中大部分应用可从深度商店安装，但深度商店中的应用倾向于保守、版本普遍较旧。最新版应用可从相应网站下载、安装，但贸然使用最新版应用可能有导致系统崩溃的风险。
