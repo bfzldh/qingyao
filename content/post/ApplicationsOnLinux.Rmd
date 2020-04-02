@@ -45,6 +45,7 @@ tags: ["Application","Software"]
 - 360压缩（应用商店安装，或使用命令安装sudo apt install 360zip）
 
 # 输入法
+- 讯飞输入法 (从应用商店安装)
 - 中州韵（可从[deepin论坛](https://bbs.deepin.org/)搜索安装方法）
 
 # 浏览器
