@@ -17,26 +17,16 @@ data(Cheung09)
 Cheung09</code></pre>
 <pre><code>## $data
 ## $data$`1`
-##         x1      x2      x3      x4      x5      x6      x7       x8
-## x1 0.77298 0.26975 0.24009 0.23778 0.20869 0.22377 0.18801  0.07055
-## x2 0.26975 0.91307 0.44374 0.26083 0.28387 0.20660 0.12764  0.22892
-## x3 0.24009 0.44374 1.11292 0.29440 0.26262 0.27320 0.18548  0.20417
-## x4 0.23778 0.26083 0.29440 0.80501 0.47489 0.45939 0.40998  0.09104
-## x5 0.20869 0.28387 0.26262 0.47489 0.89692 0.41972 0.31541  0.33907
-## x6 0.22377 0.20660 0.27320 0.45939 0.41972 1.36089 0.74274  0.18137
-## x7 0.18801 0.12764 0.18548 0.40998 0.31541 0.74274 1.01075  0.13724
-## x8 0.07055 0.22892 0.20417 0.09104 0.33907 0.18137 0.13724  1.81805
-## x9 0.10051 0.09590 0.18243 0.10142 0.06561 0.12973 0.12776 -0.01980
-##          x9
-## x1  0.10051
-## x2  0.09590
-## x3  0.18243
-## x4  0.10142
-## x5  0.06561
-## x6  0.12973
-## x7  0.12776
-## x8 -0.01980
-## x9  0.91252
+##         x1      x2      x3      x4      x5      x6      x7       x8       x9
+## x1 0.77298 0.26975 0.24009 0.23778 0.20869 0.22377 0.18801  0.07055  0.10051
+## x2 0.26975 0.91307 0.44374 0.26083 0.28387 0.20660 0.12764  0.22892  0.09590
+## x3 0.24009 0.44374 1.11292 0.29440 0.26262 0.27320 0.18548  0.20417  0.18243
+## x4 0.23778 0.26083 0.29440 0.80501 0.47489 0.45939 0.40998  0.09104  0.10142
+## x5 0.20869 0.28387 0.26262 0.47489 0.89692 0.41972 0.31541  0.33907  0.06561
+## x6 0.22377 0.20660 0.27320 0.45939 0.41972 1.36089 0.74274  0.18137  0.12973
+## x7 0.18801 0.12764 0.18548 0.40998 0.31541 0.74274 1.01075  0.13724  0.12776
+## x8 0.07055 0.22892 0.20417 0.09104 0.33907 0.18137 0.13724  1.81805 -0.01980
+## x9 0.10051 0.09590 0.18243 0.10142 0.06561 0.12973 0.12776 -0.01980  0.91252
 ## 
 ## $data$`2`
 ##    x1 x2      x3      x4      x5      x6      x7      x8      x9
@@ -103,16 +93,16 @@ stackeData</code></pre>
 ## 2 0.33495 0.16124 0.00912 0.71718 0.19873 0.14582 0.21907 0.04089 0.92247
 ## 3      NA      NA      NA      NA      NA      NA      NA      NA 0.82987
 ## 4 0.22716      NA      NA 0.91598 0.37035 0.19550      NA      NA 1.48445
-##     x7_x6   x8_x6   x9_x6   x7_x7   x8_x7   x9_x7   x8_x8    x9_x8   x9_x9
-## 1 0.74274 0.18137 0.12973 1.01075 0.13724 0.12776 1.81805 -0.01980 0.91252
-## 2 0.55128 0.17143 0.01380 1.00462 0.16561 0.04322 1.49431  0.29094 1.01960
-## 3 0.43769 0.23195 0.03856 0.83476 0.19002 0.03986 1.42583  0.38343 1.03062
-## 4 0.62637      NA      NA 1.05049      NA      NA      NA       NA      NA
-##     n studyName
-## 1 591    study1
-## 2 656    study2
-## 3 832    study3
-## 4 823    study4</code></pre>
+##     x7_x6   x8_x6   x9_x6   x7_x7   x8_x7   x9_x7   x8_x8    x9_x8   x9_x9   n
+## 1 0.74274 0.18137 0.12973 1.01075 0.13724 0.12776 1.81805 -0.01980 0.91252 591
+## 2 0.55128 0.17143 0.01380 1.00462 0.16561 0.04322 1.49431  0.29094 1.01960 656
+## 3 0.43769 0.23195 0.03856 0.83476 0.19002 0.03986 1.42583  0.38343 1.03062 832
+## 4 0.62637      NA      NA 1.05049      NA      NA      NA       NA      NA 823
+##   studyName
+## 1    study1
+## 2    study2
+## 3    study3
+## 4    study4</code></pre>
 <p>Now you can use the function below. Note that the orders of the covariances in data frame must be consistent with the order <code>vec2symMat</code> function fills the matrix. That’s from top to down and from left to right. This function has 6 arguments.</p>
 <ul>
 <li><code>dataFrame</code> = the data frame including all data or information.</li>
@@ -150,16 +140,14 @@ create_metaSEM_data &lt;-
   }</code></pre>
 <p>Then, have a try to convert <code>stackeData</code> back to the list.</p>
 <pre class="r"><code>names(stackeData) # To find the column number.</code></pre>
-<pre><code>##  [1] &quot;x1_x1&quot;     &quot;x2_x1&quot;     &quot;x3_x1&quot;     &quot;x4_x1&quot;     &quot;x5_x1&quot;    
-##  [6] &quot;x6_x1&quot;     &quot;x7_x1&quot;     &quot;x8_x1&quot;     &quot;x9_x1&quot;     &quot;x2_x2&quot;    
-## [11] &quot;x3_x2&quot;     &quot;x4_x2&quot;     &quot;x5_x2&quot;     &quot;x6_x2&quot;     &quot;x7_x2&quot;    
-## [16] &quot;x8_x2&quot;     &quot;x9_x2&quot;     &quot;x3_x3&quot;     &quot;x4_x3&quot;     &quot;x5_x3&quot;    
-## [21] &quot;x6_x3&quot;     &quot;x7_x3&quot;     &quot;x8_x3&quot;     &quot;x9_x3&quot;     &quot;x4_x4&quot;    
-## [26] &quot;x5_x4&quot;     &quot;x6_x4&quot;     &quot;x7_x4&quot;     &quot;x8_x4&quot;     &quot;x9_x4&quot;    
-## [31] &quot;x5_x5&quot;     &quot;x6_x5&quot;     &quot;x7_x5&quot;     &quot;x8_x5&quot;     &quot;x9_x5&quot;    
-## [36] &quot;x6_x6&quot;     &quot;x7_x6&quot;     &quot;x8_x6&quot;     &quot;x9_x6&quot;     &quot;x7_x7&quot;    
-## [41] &quot;x8_x7&quot;     &quot;x9_x7&quot;     &quot;x8_x8&quot;     &quot;x9_x8&quot;     &quot;x9_x9&quot;    
-## [46] &quot;n&quot;         &quot;studyName&quot;</code></pre>
+<pre><code>##  [1] &quot;x1_x1&quot;     &quot;x2_x1&quot;     &quot;x3_x1&quot;     &quot;x4_x1&quot;     &quot;x5_x1&quot;     &quot;x6_x1&quot;    
+##  [7] &quot;x7_x1&quot;     &quot;x8_x1&quot;     &quot;x9_x1&quot;     &quot;x2_x2&quot;     &quot;x3_x2&quot;     &quot;x4_x2&quot;    
+## [13] &quot;x5_x2&quot;     &quot;x6_x2&quot;     &quot;x7_x2&quot;     &quot;x8_x2&quot;     &quot;x9_x2&quot;     &quot;x3_x3&quot;    
+## [19] &quot;x4_x3&quot;     &quot;x5_x3&quot;     &quot;x6_x3&quot;     &quot;x7_x3&quot;     &quot;x8_x3&quot;     &quot;x9_x3&quot;    
+## [25] &quot;x4_x4&quot;     &quot;x5_x4&quot;     &quot;x6_x4&quot;     &quot;x7_x4&quot;     &quot;x8_x4&quot;     &quot;x9_x4&quot;    
+## [31] &quot;x5_x5&quot;     &quot;x6_x5&quot;     &quot;x7_x5&quot;     &quot;x8_x5&quot;     &quot;x9_x5&quot;     &quot;x6_x6&quot;    
+## [37] &quot;x7_x6&quot;     &quot;x8_x6&quot;     &quot;x9_x6&quot;     &quot;x7_x7&quot;     &quot;x8_x7&quot;     &quot;x9_x7&quot;    
+## [43] &quot;x8_x8&quot;     &quot;x9_x8&quot;     &quot;x9_x9&quot;     &quot;n&quot;         &quot;studyName&quot;</code></pre>
 <pre class="r"><code>semData &lt;- create_metaSEM_data(dataFrame = stackeData,
                                nCol = 46,
                                studyNameCol = 47,
@@ -169,26 +157,16 @@ create_metaSEM_data &lt;-
 semData</code></pre>
 <pre><code>## $cor_matrix_list
 ## $cor_matrix_list$study1
-##         x1      x2      x3      x4      x5      x6      x7       x8
-## x1 0.77298 0.26975 0.24009 0.23778 0.20869 0.22377 0.18801  0.07055
-## x2 0.26975 0.91307 0.44374 0.26083 0.28387 0.20660 0.12764  0.22892
-## x3 0.24009 0.44374 1.11292 0.29440 0.26262 0.27320 0.18548  0.20417
-## x4 0.23778 0.26083 0.29440 0.80501 0.47489 0.45939 0.40998  0.09104
-## x5 0.20869 0.28387 0.26262 0.47489 0.89692 0.41972 0.31541  0.33907
-## x6 0.22377 0.20660 0.27320 0.45939 0.41972 1.36089 0.74274  0.18137
-## x7 0.18801 0.12764 0.18548 0.40998 0.31541 0.74274 1.01075  0.13724
-## x8 0.07055 0.22892 0.20417 0.09104 0.33907 0.18137 0.13724  1.81805
-## x9 0.10051 0.09590 0.18243 0.10142 0.06561 0.12973 0.12776 -0.01980
-##          x9
-## x1  0.10051
-## x2  0.09590
-## x3  0.18243
-## x4  0.10142
-## x5  0.06561
-## x6  0.12973
-## x7  0.12776
-## x8 -0.01980
-## x9  0.91252
+##         x1      x2      x3      x4      x5      x6      x7       x8       x9
+## x1 0.77298 0.26975 0.24009 0.23778 0.20869 0.22377 0.18801  0.07055  0.10051
+## x2 0.26975 0.91307 0.44374 0.26083 0.28387 0.20660 0.12764  0.22892  0.09590
+## x3 0.24009 0.44374 1.11292 0.29440 0.26262 0.27320 0.18548  0.20417  0.18243
+## x4 0.23778 0.26083 0.29440 0.80501 0.47489 0.45939 0.40998  0.09104  0.10142
+## x5 0.20869 0.28387 0.26262 0.47489 0.89692 0.41972 0.31541  0.33907  0.06561
+## x6 0.22377 0.20660 0.27320 0.45939 0.41972 1.36089 0.74274  0.18137  0.12973
+## x7 0.18801 0.12764 0.18548 0.40998 0.31541 0.74274 1.01075  0.13724  0.12776
+## x8 0.07055 0.22892 0.20417 0.09104 0.33907 0.18137 0.13724  1.81805 -0.01980
+## x9 0.10051 0.09590 0.18243 0.10142 0.06561 0.12973 0.12776 -0.01980  0.91252
 ## 
 ## $cor_matrix_list$study2
 ##    x1 x2      x3      x4      x5      x6      x7      x8      x9
