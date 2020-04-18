@@ -10,7 +10,7 @@ tags: ["Application","Software","R"]
 我们可以通过两种方式在全新安装的deepin20上安装R：
 
 1. 直接使用`apt-get`安装软件库中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。
-2. 下载R的源文件[编译安装](https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install)。这里推荐这种方法。
+2. 下载R的源文件[编译安装](https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install)。推荐这种方法。
 
 通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里将列举出需要安装的package：
 
@@ -49,7 +49,7 @@ tags: ["Application","Software","R"]
 
 接下来可以安装RStudio，以便于使用R。这里有两种方法：
 
-1. 从应用商店安装RStudio。这种方式安装的RStudio版本可能版本较旧。
+1. 从应用商店安装RStudio。这种方式安装的RStudio版本可能较旧。
 2. 下载最新版RStudio的debian程序包并安装。推荐这种方法。
 
 安装步骤如下：
