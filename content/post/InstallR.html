@@ -1,7 +1,7 @@
 ---
 title: "在deepin20上编译安装R"
 author: "Zhang Qingyao"
-date: "2020-04-18"
+date: "2020-04-19"
 output: html_document
 series: ["Linux"]
 categories: ["Application"]
@@ -10,12 +10,22 @@ tags: ["Application","Software","R"]
 
 
 
-<p>我们可以通过两种方式在全新安装的deepin20上安装R：</p>
+<p>我们可以通过三种方式在全新安装的deepin20上安装R：</p>
 <ol style="list-style-type: decimal">
-<li>直接使用<code>apt-get</code>安装软件库中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。</li>
-<li>下载R的源文件<a href="https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install">编译安装</a>。推荐这种方法。</li>
+<li>直接使用<code>apt-get</code>安装debian stable软件源中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。</li>
+<li>使用<a href="https://backports.debian.org/Instructions/">Backports</a>（向后移植）软件源中的R。</li>
+<li>下载R的源文件<a href="https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install">编译安装</a>。</li>
 </ol>
-<p>通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里将列举出需要安装的package：</p>
+<div id="使用backports源中的r" class="section level1">
+<h1>使用Backports源中的R</h1>
+<ol style="list-style-type: decimal">
+<li>在文件<code>/etc/apt/sources.list</code>最后一行添加<code>deb https://cloud.r-project.org/bin/linux/debian buster-cran35/</code>并保存。</li>
+<li>之后使用<code>apt-get</code>安装R。</li>
+</ol>
+</div>
+<div id="编译安装" class="section level1">
+<h1>编译安装</h1>
+<p>通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
 <ul>
 <li>default-jdk</li>
 <li>libjpeg-dev</li>
@@ -32,7 +42,7 @@ tags: ["Application","Software","R"]
 <li>liblzma-dev</li>
 <li>libcurl4-openssl-dev</li>
 </ul>
-<p>在安装上述package之后，应该就可以一路跑到底、编译成功。有些R package可能依赖其他的debian package，遇到这些问题，可以再找一下解决办法。下面将介绍编译安装R的步骤。</p>
+<p>在安装上述package之后，应该就可以一路跑到底、编译成功。有些R package可能依赖其他的debian package，如果遇到这些问题，可自行寻找解决办法。下面将介绍编译安装R的步骤。</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://cloud.r-project.org/">下载</a>R的源文件，<a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></li>
 <li>解压</li>
@@ -42,6 +52,9 @@ tags: ["Application","Software","R"]
 <li><code>make</code>命令成功运行后，终端中可能显示“PDF文件无法创建”等警告信息。无妨，忽略即可。接下来在终端中输入运行命令<code>make install</code>。该命令将创建后的R软件安装在deepin的主目录中。</li>
 <li>为了可以在终端中以命令行方式直接运行R，这里需要进入R的安装目录：<code>/home/你的用户名/R/bin</code>，在R上点击右键发送R的快捷方式到桌面，在桌面通过终端将该快捷方式复制到deepin的bin目录中，注意这里需要将快捷方式重命名为<code>R</code>。可在桌面打开终端并运行命令<code>sudo mv ‘R 快捷方式’ /usr/bin/R</code></li>
 </ol>
+</div>
+<div id="安装rstudio" class="section level1">
+<h1>安装RStudio</h1>
 <p>接下来可以安装RStudio，以便于使用R。这里有两种方法：</p>
 <ol style="list-style-type: decimal">
 <li>从应用商店安装RStudio。这种方式安装的RStudio版本可能较旧。</li>
@@ -55,3 +68,4 @@ tags: ["Application","Software","R"]
 </ol>
 <p>现在，你可以安装自己常用的R package。Enjoy！</p>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</p>
+</div>
