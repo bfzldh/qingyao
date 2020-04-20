@@ -11,10 +11,10 @@ tags: ["Application","Software"]
 
 # 心理学专业
 - 数据处理
-    - [R](https://www.r-project.org/)（建议自己编译安装最新版）
-    - [RStudio](https://www.rstudio.com/products/rstudio/download/)（使用dpkg命令安装最新版deb包）
+    - [R](https://www.r-project.org/)（安装方法见[在deepin20上安装R](https://psych.netlify.app/post/installr/)）
+    - [RStudio](https://www.rstudio.com/products/rstudio/download/)（最新版安装包见[百度云盘](https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA)[提取码：v54t]地址，安装方法见[在deepin20上安装R](https://psych.netlify.app/post/installr/)）
     - [Mplus](https://bbs.pinggu.org/forum-135-1.html)（使用PlayOnLinux安装windows版，也可直接使用Linux版）
-    - [SPSS 24](https://pan.baidu.com/s/1wOTI5J9MF-LCn4YsXDgMwg)（提取码:hlep）
+    - SPSS 24[下载](https://bbs.pinggu.org/thread-4646981-1-1.html)
     - [JASP](https://jasp-stats.org/)（类似SPSS，统计功能较少）
     - [EpiData](http://www.epidata.dk/)（完善的数据录入功能，简单的统计功能，deepin上对中文的支持不友好）
     - [RevMan 5](https://community.cochrane.org/help/tools-and-software/revman-5)（元分析软件，依赖于java1.6或1.7）
@@ -36,8 +36,8 @@ tags: ["Application","Software"]
 - [ydict](https://github.com/TimothyYe/ydict)(使用命令行操作的有道在线词典)
 - [Mendeley](https://www.mendeley.com/download-desktop/)(文献管理)
 - [福昕阅读器](https://www.foxitsoftware.cn/downloads/)（pdf文档，可添加多种批注）
-- caj阅读器（caj文档，wine版，可从应用商店安装）
-- 文档查看器（Evince，系统自带，可查看多种格式的文档）
+- caj阅读器（现在有Linux版了，见[中国知网](http://cajviewer.cnki.net/download.html)）
+- 文档查看器（系统自带，可查看多种格式的文档）
 - [calibre](https://calibre-ebook.com/download_linux)（多种格式电子书的管理、阅读、格式转换）
 
 # 压缩
@@ -45,10 +45,12 @@ tags: ["Application","Software"]
 - 360压缩（应用商店安装，或使用命令安装sudo apt install 360zip）
 
 # 输入法
+- 搜狗（系统默认）
 - 讯飞输入法 (从应用商店安装)
 - 中州韵（可从[deepin论坛](https://bbs.deepin.org/)搜索安装方法）
 
 # 浏览器
+- 火狐浏览器
 - Chrome
 - 360浏览器
 
@@ -58,7 +60,7 @@ tags: ["Application","Software"]
 - 深度看图
 
 # 视频
-- 深度录屏（适合录制短时小视频，无语音）
+- 深度录屏（适合录制短时小视频，可录入系统和话筒声音）
 - [OBS Studio](https://obsproject.com/wiki/install-instructions#linux)（适合录制课程视频）
 - 深度影院（本地播放）
 
@@ -77,7 +79,7 @@ tags: ["Application","Software"]
 - [米聊](http://www.miliao.com)
 - [Skype](https://repo.skype.com/latest/skypeforlinux-64.deb)
 - 微信（wine版，从应用商店安装）
-- QQ，Tim（wine版，从应用商店安装）
+- QQ（Linux版），Tim（wine版，从应用商店安装）
 
 # 邮件客户端
 - 雷鸟客户端（从应用商店安装）
@@ -98,16 +100,18 @@ tags: ["Application","Software"]
 
 - [Oracle VM VirtualBox](https://www.virtualbox.org/)
 
-# 其他深度全家桶
+# 其他深度应用
 - 深度文件管理器
-- 深度字体安装器
+- 深度字体安装器（自行安装Microsoft Office常用字体）
 - 深度取色器
-- 深度商店
+- 深度应用商店
 - 深度软件包管理器（应用安装）
 - 深度计算器
 - 深度终端（代码之下，智慧之上）
 - 深度系统监视器（任务管理器）
 - 深度录音
+- 深度记事本
+- 深度相册
 - 深度启动盘制作工具（系统安装）
 - 深度安装器（系统安装）
 - 深度备份还原工具（系统备份）
