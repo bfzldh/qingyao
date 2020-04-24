@@ -13,8 +13,8 @@ tags: ["Application","Software","R"]
 <p>我们可以通过三种方式在全新安装的deepin20上安装R：</p>
 <ol style="list-style-type: decimal">
 <li>直接使用<code>apt-get</code>安装debian stable软件源中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。</li>
-<li>使用<a href="https://backports.debian.org/Instructions/">Backports</a>（向后移植）软件源中的R。</li>
-<li>下载R的源文件<a href="https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install">编译安装</a>。</li>
+<li>安装使用<a href="https://backports.debian.org/Instructions/">Backports</a>（向后移植）软件源中的R。</li>
+<li><a href="https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install">编译安装</a>。</li>
 </ol>
 <div id="使用backports源中的r" class="section level1">
 <h1>使用Backports源中的R</h1>
@@ -25,7 +25,8 @@ tags: ["Application","Software","R"]
 </div>
 <div id="编译安装" class="section level1">
 <h1>编译安装</h1>
-<p>通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
+<p>首先参考RStudio网站上的<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source">教程</a>，<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source" class="uri">https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source</a>。</p>
+<p>如果上述方法不可行，可使用以下比较繁琐的方法。通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
 <ul>
 <li>default-jdk</li>
 <li>libjpeg-dev</li>

@@ -10,8 +10,8 @@ tags: ["Application","Software","R"]
 我们可以通过三种方式在全新安装的deepin20上安装R：
 
 1. 直接使用`apt-get`安装debian stable软件源中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。
-2. 使用[Backports](https://backports.debian.org/Instructions/)（向后移植）软件源中的R。
-3. 下载R的源文件[编译安装](https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install)。
+2. 安装使用[Backports](https://backports.debian.org/Instructions/)（向后移植）软件源中的R。
+3. [编译安装](https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install)。
 
 # 使用Backports源中的R
 
@@ -20,7 +20,9 @@ tags: ["Application","Software","R"]
 
 # 编译安装
 
-通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的[介绍](https://packages.debian.org/buster/r-base-core))：
+首先参考RStudio网站上的[教程](https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source)，https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。
+
+如果上述方法不可行，可使用以下比较繁琐的方法。通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的[介绍](https://packages.debian.org/buster/r-base-core))：
 
 - default-jdk
 - libjpeg-dev
