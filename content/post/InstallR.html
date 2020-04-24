@@ -25,8 +25,8 @@ tags: ["Application","Software","R"]
 </div>
 <div id="编译安装" class="section level1">
 <h1>编译安装</h1>
-<p>首先参考RStudio网站上的<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source">教程</a>，<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source" class="uri">https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source</a>。</p>
-<p>如果上述方法不可行，可使用以下比较繁琐的方法。通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
+<p>可参考RStudio网站上的<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source">教程</a>，<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。需要注意的是，通过%60sudo" class="uri">https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。需要注意的是，通过`sudo</a> apt-get build-dep r-base`自动安装编译依赖的package可能会在电脑中自动安装大量的package。</p>
+<p>可使用以下比较繁琐的方法来安装。这种手动安装依赖的package的方式或许可以节省电脑空间（没仔细比较过，不清楚）。通过源文件编译安装R需要在deepin系统中提前安装R依赖的package。为了减少试错，这里列举出R依赖的package(参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
 <ul>
 <li>default-jdk</li>
 <li>libjpeg-dev</li>
