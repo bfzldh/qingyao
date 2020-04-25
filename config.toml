@@ -17,7 +17,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
   # useCDN = false
-   showShareIcons = false
+  showShareIcons = false
   # Date format
   dateFormat = "January 2, 2006"
   # Put images/favicon.ico file

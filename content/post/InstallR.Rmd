@@ -1,30 +1,38 @@
 ---
 title: "在deepin20上安装R"
 author: "Zhang Qingyao"
-date: "2020-04-19"
-output: html_document
+date: "2020-04-25"
+output: 
+  html_document:
+    toc: True
+    toc_depth: 2
 series: ["Linux"]
 categories: ["Application"]
 tags: ["Application","Software","R"]
 ---
-我们可以通过三种方式在全新安装的deepin20上安装R：
 
-1. 直接使用`apt-get`安装debian stable软件源中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。
+# 更新R
+如果你的系统中已经安装了旧版本的R（例如，R 3.6.6），在安装新版本（例如，R 4.0.0）之前你需要将旧版本的R卸载干净，方法是在终端运行`sudo apt purge r-base-core`，之后安装新版本的R。
+
+# 安装R
+我们可以通过三种方式在deepin20上安装R：
+
+1. 直接使用`sudo apt install r-base-core`安装deepin软件源中的R。这种方法安装的R的版本较旧，也可能有各种各样的兼容性问题。
 2. 安装使用[Backports](https://backports.debian.org/Instructions/)（向后移植）软件源中的R。
 3. [编译安装](https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install)。
 
-# 使用Backports源中的R
+## 使用Backports源中的R
 
-1. 在文件`/etc/apt/sources.list`最后一行添加`deb https://cloud.r-project.org/bin/linux/debian buster-cran35/`并保存。
-2. 之后使用`apt-get`安装R。
+1. 在文件`/etc/apt/sources.list`最后一行添加`deb https://cloud.r-project.org/bin/linux/debian buster-cran40/`并保存。
+2. 之后使用`sudo apt install r-base-core`安装R。
 
-# 编译安装
+## 编译安装
 
-通过源文件编译安装R需要在deepin系统中提前安装所需（依赖）的package。有两种方式解决依赖问题：
+通过源文件编译安装R需要提前安装所需（依赖）的package。有两种方式解决依赖问题：
 
 第一种方法：可参考RStudio网站上的[教程](https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source)，https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。该方法通过`sudo apt-get build-dep r-base`自动安装所依赖的package，这可能会在电脑中自动安装大量的package。
 
-第二种方法：手动安装所依赖的package。这种手动安装依赖的package的方式或许可以节省电脑空间（没仔细比较过，不清楚）。通常，我们可以通过运行`configure`命令检查是否缺少依赖，当终端报错时，可根据提示安装相应的package。为了减少试错，这里列举出R依赖的package(适用于R3.6.3；可参考debian官网上对于R依赖的package的[介绍](https://packages.debian.org/buster/r-base-core))：
+第二种方法：手动安装所依赖的package。这种手动安装依赖的package的方式或许可以节省电脑空间（没仔细比较过，不清楚）。通常，我们可以通过运行`configure`命令检查是否缺少依赖，当终端报错时，可根据提示安装相应的package。为了减少试错，这里列举出R依赖的package(可参考debian官网上对于R依赖的package的[介绍](https://packages.debian.org/buster/r-base-core))：
 
 - default-jdk
 - libjpeg-dev
@@ -41,27 +49,27 @@ tags: ["Application","Software","R"]
 - liblzma-dev
 - libcurl4-openssl-dev
 
-安装上依赖的package之后，就可以一路跑到底、编译成功。有些R package可能依赖其他的debian package，如果遇到这些问题，可自行寻找解决办法。下面将介绍编译安装R的步骤。
+安装上依赖的package之后，应该就可以一路跑到底、编译成功。有些R package可能依赖其他的debian package，如果遇到这些问题，可自行寻找解决办法。下面将介绍编译安装R的步骤。
 
 1. [下载](https://cloud.r-project.org/)R的源文件，https://cloud.r-project.org/
 2. 解压
 3. 进入解压后的文件夹
-4. 配置。在终端中运行编译命令`./configure --prefix=/home/<你的用户名>/R --enable-R-shlib --with-cairo=yes --with-tcl-config=/usr/lib/tcl8.6/tclConfig.sh --with-tk-config=/usr/lib/tk8.6/tkConfig.sh`
+4. 配置。在终端中运行编译命令`./configure --prefix=/home/<你的用户名>/R --enable-R-shlib`
 5. 编译。配置成功后，在终端中输入运行命令`make`,该命令将基于源码建立R软件。
 6. 安装。`make`命令成功运行后，终端中可能显示“PDF文件无法创建”等警告信息。无妨，忽略即可。接下来在终端中输入运行命令`make install`。该命令将创建后的R软件安装在deepin的主目录中。
 7. 为了可以在终端中以命令行方式直接运行R，这里需要进入R的安装目录：`/home/<你的用户名>/R/bin`，在R上点击右键发送R的快捷方式到桌面，在桌面打开终端并运行命令`sudo mv ‘R 快捷方式’ /usr/bin/R`（该命令将该快捷方式复制到deepin的bin目录中，并将快捷方式重命名为`R`）。
 
-# 安装RStudio
+## 安装RStudio
 
 接下来可以安装RStudio，以便于使用R。这里有两种方法：
 
 1. 从应用商店安装RStudio。这种方式安装的RStudio版本可能较旧。
-2. 下载最新版RStudio的debian程序包并安装。推荐这种方法。
+2. 下载最新版RStudio的debian10程序包并安装。推荐这种方法。
 
 安装步骤如下：
 
-1. 从[RStudio官网](https://rstudio.com/products/rstudio/download/)下载最新版的、适用于debian10的程序包。为了提高下载速度，我在百度云盘共享了最新版RStudio，链接:https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA 提取码:v54t
-2. 在终端中运行`sudo dpkg -i 程序包名.deb`。终端中可能会提醒有依赖问题。
+1. 从[RStudio官网](https://rstudio.com/products/rstudio/download/)下载RStudio。为了提高下载速度，我在百度云盘共享了最新版RStudio，链接:https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA 提取码:v54t
+2. 在终端中运行`sudo dpkg -i '<程序包名.deb>'`。终端中可能会提醒有依赖问题。
 3. 在终端中运行`sudo apt-get -f install`解决依赖问题。
 
 现在，你可以安装自己常用的R package。Enjoy！
