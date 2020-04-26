@@ -1,11 +1,11 @@
 ---
-title: "心理学专业Linux应用清单"
+title: "Linux应用清单"
 author: "Zhang Qingyao"
 date: "2020-03-24"
-output: html_document
 series: ["Linux"]
 categories: ["Application"]
 tags: ["Application","Software"]
+output: html_document
 ---
 以下应用（软件）可在[deepin](https://www.deepin.org/)操作系统上使用。其中大部分应用可从深度商店安装，但深度商店中的应用倾向于保守、版本普遍较旧。最新版应用可从相应网站下载、安装，但贸然使用最新版应用可能有导致系统崩溃的风险。
 
@@ -31,6 +31,9 @@ tags: ["Application","Software"]
     - [LibreOffice](https://www.libreoffice.org)（可以直接导出矢量图）
 - pdf编辑器
     - [PDFsam basic](https://pdfsam.org/download-pdfsam-basic/)（页面剪接、排序）
+
+# 时间管理
+- [Clockify](https://clockify.me/)（统计自己的有效办公时间）
 
 # 阅读
 - [ydict](https://github.com/TimothyYe/ydict)(使用命令行操作的有道在线词典)
