@@ -15,7 +15,7 @@ tags: [""]
 
 翘首而立，荒野半生。
 
-![衣带渐宽终不悔](/post/dandelion/dandelion1.jpg)
+![衣带渐宽终不悔](https://psych.netlify.app/post/dandelion/dandelion1.jpg)
 
 金簪夺目，未闻其名。
 
@@ -23,7 +23,7 @@ tags: [""]
 
 号角金声，扬眉远行。
 
-![众里寻她千百度](/post/dandelion/dandelion2.jpg)
+![众里寻她千百度](https://psych.netlify.app/post/dandelion/dandelion2.jpg)
 
 </center>
 
