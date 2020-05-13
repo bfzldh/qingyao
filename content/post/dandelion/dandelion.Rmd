@@ -1,6 +1,6 @@
 ---
 title: "荒野"
-author: "Qingyao Zhang"
+author: "Zhang, Qingyao"
 date: "2020-04-30"
 draft: False
 output: html_document

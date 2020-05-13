@@ -1,5 +1,5 @@
 baseurl = "https://psych.netlify.app/"
-title = "Psych"
+title = "Yao's Blog"
 # themesDir = "../../"
 theme = "whiteplain"
 languageCode = "en"
@@ -11,7 +11,7 @@ pygmentsCodefences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
 # Copyright notice. This is displayer in the footer.
-copyright = "Copyright &copy; 2019-2020 Qingyao Zhang"
+copyright = "Copyright &copy; 2019-2020 Zhang, Qingyao"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -25,7 +25,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # This is displayer in About page.
 [params.author]
-  name = "Qingyao Zhang"
+  name = "Yao"
 
   # Gravatar or Abatar image
   #gravatar = "Gravatar email or MD5 Hash"
@@ -62,7 +62,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   #pinterest = "Pinterest username"
   #telegram = "Telegram username"
   #vine = "Vine username"
-  email = "bfzldh@foxmail.com"
+  email = "qingyaozhang@yeah.net"
 
 [taxonomies]
   category = "categories"

@@ -1,6 +1,6 @@
 ---
-date: "2014-07-12"
-title: Qingyao Zhang
+date: "2020-05-14"
+title: Yao
 ---
 
-This is Qingyao's blog.
+https://psychometric.site/ is temporally redirected to https://psych.netlify.app, which is used as Yao's blog.
