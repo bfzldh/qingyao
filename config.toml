@@ -1,5 +1,5 @@
-baseurl = "https://www.tobe.cool/"
-title = "To Be Cool"
+baseurl = "https://psych.netlify.app/"
+title = "Psych"
 # themesDir = "../../"
 theme = "whiteplain"
 languageCode = "en"
