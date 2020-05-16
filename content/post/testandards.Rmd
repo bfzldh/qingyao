@@ -1,0 +1,16 @@
+---
+title: "教育与心理测验的标准(2014):书评"
+author: "Qingyao Zhang"
+date: "2020-05-11"
+draft: False
+output: html_document
+series: ["Academy"]
+categories: ["Scale"]
+tags: [""]
+---
+《Standards for Educational and Psychological Testing》(2014)是由美国教育研究协会(American Educational Research Association, AERA)，美国心理学会(American Psychological Association, APA)，全美教育测量学会(National Council on Measurement in Education, NCME)于2014年4月修订出版的测验标准。考虑到这是由APA修订多次的标准，我惊讶于自己没有在学校学习中接触过这本书，这可能是因为当年的我年少无知、没有留心。本文简明地翻译了书中的标准，并对其进行了简单地评论。。当标准过于简单以至于我不能理解时，我将参考原文中的评论(comment)添加一些备注，以使标准自身可读、可理解。
+
+全文下载：
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。
