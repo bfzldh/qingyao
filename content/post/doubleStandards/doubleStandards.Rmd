@@ -4,8 +4,8 @@ author: "Qingyao Zhang"
 date: "2020-06-10"
 draft: False
 output: html_document
-series: ["Academy"]
-categories: ["Scale"]
+series: ["Life"]
+categories: ["Picture"]
 tags: [""]
 ---
 ![Double Standards](https://psych.netlify.app/post/doubleStandards/doubleStandards.jpeg)
