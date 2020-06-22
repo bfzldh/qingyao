@@ -1,6 +1,6 @@
 ---
+title: About
 date: "2020-05-14"
-title: Yao
 ---
 
 这是张庆垚的博客。最新文章也会通过微信公众号*PsychStudy*推送。
