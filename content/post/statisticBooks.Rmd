@@ -11,7 +11,7 @@ draft: false
 
 恕我直言，你最大的问题在于不读书。
 
-结合我自身的学习经验，按照从基础到高级的顺序，我给出以下书籍供大家参考。这里列出的书籍都是我读过的，我没有读过的书籍暂且不放在这里。下面列出的所有英文书籍可从[Library Genesis](http://gen.lib.rus.ec/)下载，下面列出的所有中文书籍可从[经管之家论坛](http://bbs.pinggu.org/)下载。
+结合我自身的学习经验，按照从基础到高级的顺序，我给出以下书籍供大家参考。这里列出的书籍都是我读过的，我没有读过的书籍暂且不放在这里。下面列出的所有英文书籍可从[Library Genesis](http://gen.lib.rus.ec/)下载，下面列出的所有中文书籍可从[经管之家论坛](http://bbs.pinggu.org/)下载。你也可以通过[鸠摩搜索](https://www.jiumodiary.com/)查找电子书籍。
 
 1. 《Essentialsof Statistics for the Behavioral Sciences (8th Ed)》
 
