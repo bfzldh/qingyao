@@ -1,0 +1,41 @@
+---
+title: "学术会议海报2.0"
+author: "张庆垚"
+date: "2020-07-11"
+output: html_document
+series: ["Academy"]
+categories: ["Publication"]
+tags: ["Poster"]
+draft: false
+---
+
+最近发现APA年会开始推荐一种新的海报排版，其效果如下：
+
+![图1 APA年会海报模板效果图](/post/poster2.0/APA-mod.png)
+
+概括地讲，这种排版将海报分成左中右三部分：
+- 左部呈现常规的引言、方法、结果和讨论。
+- 中部呈现最核心、最重要的发现。
+- 右部呈现详尽的数据表格。
+
+这种排版模式据称首先由Mike Morriso倡导，其在Youtube上的视频“How to create a better research poster in less time”介绍了这一模板背后的动机和逻辑。学界同仁在看到这一排版之后都感觉挺好，并称这一排版模式为“Poster 2.0”。
+
+![图2 Poster2.0](/post/poster2.0/poster2.0.jpg)
+
+下面简单介绍一下这一排版的逻辑。这里假定海报放置在报告者的右手边。那么会议现场的故事可能是这样展开的……
+
+![图3 现场示意图](/post/poster2.0/scene.jpg)
+
+首先，路人通过海报中部的大字一眼看穿该研究的核心内容，并迅速判断自己要不要深入了解这一研究。如果路人甲发现这个研究与自己的工作密切相关，它可以走向海报的作者并与其开启一段学术扯淡。而海报作者可以煞有其事地对手边的数据图表指指点点，显得自己很专业的样子。
+
+路人乙也想深入了解一下这个研究，但是海报作者正在与路人甲交谈，此时路人乙可以阅读海报左侧的文字自行了解。
+
+路人丙赶时间，没时间搭理在场的诸位，于是她掏出手机扫了扫二维码就离开了……
+
+这个排版看起来还真不错。事实上，APA推荐的模板与Mike Morriso推荐的模板略有差异。其区别在于Mike Morriso建议在海报中下方放置一个二维码，该二维码便于路人扫描收藏；而APA认为并非所有人都喜欢二维码，因此建议在中下方放置网址、社交账户、邮箱等联系方式。
+
+APA海报模板及其简介，以及Mike Morriso的视频，可通过百度网盘下载：
+
+链接: [https://pan.baidu.com/s/1nIqkbNB1KQQy526tJNh5QQ](https://pan.baidu.com/s/1nIqkbNB1KQQy526tJNh5QQ) 提取码: `rh3i`
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />本<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span>采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
