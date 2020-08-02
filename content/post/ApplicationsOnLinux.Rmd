@@ -54,11 +54,12 @@ output: html_document
 
 # 浏览器
 - 火狐浏览器
-    - Block Site插件
-    - Kopernio插件
-    - uBlock Origin插件
-    - Video DownloadHelper插件
-    - Grammarly插件​
+    - Block Site插件(屏蔽微博，专注工作)
+    - Kopernio插件(文献下载)
+    - uBlock Origin插件(屏蔽广告)
+    - Video DownloadHelper插件(下载Youtube视频)
+    - Grammarly插件​(检查网页、论文英文语法错误)
+    - Dark Reader插件(暗色网页，保护眼睛)
 - Chrome
 
 # 图像

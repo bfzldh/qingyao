@@ -30,7 +30,7 @@ tags: ["Application","Software","R"]
 
 通过源文件编译安装R需要提前安装所需（依赖）的package。有两种方式解决依赖问题：
 
-第一种方法：可参考RStudio网站上的[教程](https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source)，https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。该方法通过`sudo apt-get build-dep r-base`自动安装所依赖的package，这可能会在电脑中自动安装大量的package。
+第一种方法：可参考RStudio网站上的[教程](https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source)，https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。 该方法通过`sudo apt-get build-dep r-base`自动安装所依赖的package，这可能会在电脑中自动安装大量的package。
 
 第二种方法：手动安装所依赖的package。这种手动安装依赖的package的方式或许可以节省电脑空间（没仔细比较过，不清楚）。通常，我们可以通过运行`configure`命令检查是否缺少依赖，当终端报错时，可根据提示安装相应的package。为了减少试错，这里列举出R依赖的package(可参考debian官网上对于R依赖的package的[介绍](https://packages.debian.org/buster/r-base-core))：
 

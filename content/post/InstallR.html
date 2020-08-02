@@ -35,7 +35,7 @@ tags: ["Application","Software","R"]
 <div id="编译安装" class="section level2">
 <h2>编译安装</h2>
 <p>通过源文件编译安装R需要提前安装所需（依赖）的package。有两种方式解决依赖问题：</p>
-<p>第一种方法：可参考RStudio网站上的<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source">教程</a>，<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。该方法通过%60sudo" class="uri">https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source。该方法通过`sudo</a> apt-get build-dep r-base`自动安装所依赖的package，这可能会在电脑中自动安装大量的package。</p>
+<p>第一种方法：可参考RStudio网站上的<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source">教程</a>，<a href="https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source" class="uri">https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source</a>。 该方法通过<code>sudo apt-get build-dep r-base</code>自动安装所依赖的package，这可能会在电脑中自动安装大量的package。</p>
 <p>第二种方法：手动安装所依赖的package。这种手动安装依赖的package的方式或许可以节省电脑空间（没仔细比较过，不清楚）。通常，我们可以通过运行<code>configure</code>命令检查是否缺少依赖，当终端报错时，可根据提示安装相应的package。为了减少试错，这里列举出R依赖的package(可参考debian官网上对于R依赖的package的<a href="https://packages.debian.org/buster/r-base-core">介绍</a>)：</p>
 <ul>
 <li>default-jdk</li>
