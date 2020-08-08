@@ -61,6 +61,7 @@ output: html_document
     - Grammarly插件​(检查网页、论文英文语法错误)
     - Dark Reader插件(暗色网页，保护眼睛)
 - Chrome
+    - Kopernio插件(文献下载，百度网盘链接:https://pan.baidu.com/s/1ZGuI7GIQcMprGmPYpdZ7fw 提取码:4652)
 
 # 图像
 - [GIMP](https://www.gimp.org)（媲美Photoshop）
