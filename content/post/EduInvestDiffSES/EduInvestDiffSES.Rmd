@@ -1,0 +1,38 @@
+---
+title: "阶层差异如何在下一代身上扩大？"
+author: "张庆垚"
+date: "2020-08-18"
+output: html_document
+series: ["Academy"]
+categories: ["Literature"]
+tags: ["SES","education"]
+draft: false
+---
+
+知识改变命运。教育是减少经济差距、减少社会不平等的重要途径。一般而言，父母会努力提高孩子的学业成就，以使孩子“改天换命”。然而，低阶层与高阶层家庭的孩子在入学时已经在学业成就上表现出差异，且这种阶层差异随时间呈继续扩大的趋势。这是为什么呢？
+
+Coley等人(2020)基于美国ECLS-K纵向研究考察了父母的教育投资行为对孩子学业成就阶层差异的影响。ECLS-K纵向研究半年进行一次调查，该研究对其中6次调查的纵向数据进行了分析，考察了父母在上学期间和放假期间安排孩子参加以下四类活动的时间：
+
+- 让孩子在家里参加阅读等学习活动；
+- 让孩子观看电视或视频;
+- 让孩子参加家庭外部的学业拓展活动(例如，图书馆，书店，艺术展，博物馆，动物园，水族馆，宠物乐园，音乐会，戏剧)；
+- 让孩子待在儿童托管机构。
+
+该研究发现，首先，毫无疑问地，随着时间的推进，孩子的阅读、数学、科学知识呈上升趋势。
+
+![Growth](/post/EduInvestDiffSES/growth.png)
+
+就阶层差异而言，如下图所示，孩子在学业技能上的差异成扩大趋势。另外，就父母教育投资行为而言，高阶层的父母安排孩子参加家庭学习活动、家庭外部学业拓展活动、待在儿童托管机构的时间更长，让孩子看电视或视频的时间更短。
+
+
+![SES gap](/post/EduInvestDiffSES/SESgap.png)
+
+最后，研究者考察了不同阶层父母的教育投资行为对孩子学业成就的影响或预测作用。结果发现，孩子参加家庭学习活动、家庭外部学业拓展活动的时间越长，孩子的学业成就越高、提高幅度越大。孩子待在儿童托管机构的时间越长，孩子的学业成就越高，但提高幅度不太大。孩子看电视或视频的时间越长，孩子的学业成就越低、提高幅度越小。
+
+***那些琳琅满目的电视、视频节目正在毁掉孩子，尤其在毁掉低阶层的孩子。***
+
+参考文献
+
+Coley, R. L., Kruzik, C., & Votruba-Drzal, E. (2020). Do family investments explain growing socioeconomic disparities in children’s reading, math, and science achievement during school versus summer months? *Journal of Educational Psychology, 112*(6), 1183-1196. 
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />本<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span>采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
