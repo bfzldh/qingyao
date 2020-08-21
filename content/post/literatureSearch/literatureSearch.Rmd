@@ -1,0 +1,53 @@
+---
+title: "一文讲透文献搜索"
+author: "张庆垚"
+date: "2020-08-21"
+output: html_document
+series: ["Academy"]
+categories: ["Method"]
+tags: ["Literature","Search"]
+draft: false
+---
+
+什么是文献？所有论文可以引用的材料都是文献。我们常用的包括期刊论文、学位论文、书籍、心理量表等。
+
+什么情况下需要搜索文献？你在两种情况下需要搜索文献。第一种，你想搜索关于某个话题的文献，但没有具体到哪一篇。例如，你想搜索关于well-being的文献。第二种，你想搜索某篇论文，目标非常明确。例如，你阅读了文献A之后发现文献A引用了文献B，你想找文献B。这两种情况下的文献搜索，其区别在于搜索条件不同。前者限定条件较少，后者限定条件较多。
+
+在哪里搜文献？主要途径有：学校或科研院所的线上图书馆、学术搜索引擎、搜索引擎、期刊索引网站、数据库或出版社网站、学术社区、机构或学者的网站、非官方资源网站等。
+
+学校或科研院所通常会购买中国知网、ProQuest、Wiley等数据库。你可以通过你所在学校或科研院所的线上图书馆搜索、下载文献。即使在家里，你也可以通过VPN访问你所在学校或科研院所的线上图书馆。通过学校或科研院所的线上图书馆搜索文献，这能确保你有访问和下载文献的权限。如果你不差钱，也可以自己买权限。如果你介于差钱和不差钱之间，你可以在淘宝购买访问权限。
+
+如何确定搜索引擎的搜索条件？如下图，以well-being为例，well-being这一关键词可能会出现在标题、摘要、关键词、全文中。那么，你就可以搜索标题、摘要、关键词中包含well-being的文献。如果Well-being出现在全文其他位置，但没有出现在标题、摘要、关键词中，那well-being大概率不是这类文献所探讨的重点。文献搜索引擎可能将标题、摘要、关键词统称为主题、Theme、Topic等。你在搜索文献时需要注意调整搜索条件，除了主题、标题、摘要、关键词等，搜索条件还包括发表时间，文献所在期刊，论文作者，期刊等级等。同时满足多个搜索条件的文献较少，但这些文献可能更聚焦。就词汇而言，你需要注意搜索同义词、近义词，比如well-being的近义词happiness。另外，你可以使用命令行进行搜索，例如，使用AND表示“并”的逻辑关系，使用双引号限定完全匹配。每个网站命令行的具体用法都不同，此处不再赘述，请自行学习。如果你想确保你的搜索结果是可重复的，建议使用命令行对搜索条件进行严格限定。
+
+![wos Search](/post/literatureSearch/wosSearch.png)
+
+学术搜索引擎包括谷歌学术，百度学术，360学术，微软学术，等。学术搜索引擎提供了“引用”导出等功能。学术搜索引擎最好用的是谷歌学术，如果需要翻墙，请自行搜索翻墙方法。谷歌学术之外的学术搜索引擎不太好用，但也不是不能用，且一直在进步。很多时候，谷歌学术会直接给出文献PDF的下载链接，这些下载渠道往往是免费的。谷歌学术提供的文献来源不止一个，可以换几个试试。如果谷歌学术没有提供PDF下载链接，谷歌学术会将你带到论文所在的期刊的网站，如果该网站可以自动识别你的IP，从而判断你所在组织（学校、科研院所）已经购买了该数据库，那么接下来你就可以直接下载PDF。什么？不知道点哪里来下载PDF？那你再找找，会找到的。有些组织没有购买相应的数据库，你需要通过其他方法下载文献（见下文）。有些组织不能通过IP直接给你访问权限，你可能需要使用你的学号、工号、组织账户进行登录后下载。
+
+![Google Scholar](/post/literatureSearch/googleScholar.png)
+
+搜索引擎包括谷歌、百度等。当你试图寻找机构或学者的网站、量表，或者寻找新闻采访等资料时，谷歌、百度更为有效。例如，同时输入作者和量表名称，Google可以找到作者的个人网站及量表。
+
+ ![Google](/post/literatureSearch/google.png)
+
+期刊索引网站包括Web of Science，PubMed，PsycINFO等。这些网站可以对文献进行搜索，但没有提供可供下载的全文PDF。索引网站可能会提供链接允许你跳转到相应的出版社网站去获取全文。另外，你可以在Web of Science、PubMed等网站上使用Kopernio等浏览器插件，这些插件自动全网搜索可供下载的PDF。支持Kopernio等插件的浏览器包括Chrome，Firefox，Microsoft Edge。
+
+![wos download](/post/literatureSearch/wosDownload.png) 
+![PubMed download](/post/literatureSearch/pubMedDownload.png) 
+
+数据库或出版社网站包括ProQuest，Wiley，SienceDirect，SAGE，EBSCO，Springer等。这些网站提供了可以下载的文献全文。当你搜文献搜得多了之后，对于常见的期刊，你就能记住它们所在的数据库是哪一个。例如，国外学位论文、APA协会的期刊发表的论文可从ProQuest搜索下载。有些期刊同时被多个数据库收录，当一个数据库没有提供全文PDF时，你可以试试别的数据库。例如，《Structural Equation Modeling: A Multidisciplinary Journal》这个期刊的论文可从EBSCO数据库下载。
+
+学术社区包括ResearchGate、OSF等。在这里你或许可以找到学者的个人主页，并通过私信等方式索取文献。另外，https://psyarxiv.com/ 等预印本平台也可以找到一些论文，但是预印本平台的论文没有经过同行评审，不是最终版本，可靠性较差。
+
+![Research Gate](/post/literatureSearch/researchGate.png)  
+
+某些机构或学者会建立自己的网站，并在网站上提供一些资料，包括论文全文、量表、实验材料等。例如，世界卫生组织的网站上提供了一些关于暴力、童年虐待的测量工具，https://www.who.int/topics/injuries/zh/。 注意，世界卫生组织的英文网站提供的资源更丰富。再例如，Diener在自己的个人网站上提供了Flourishing Scale（心盛量表）的中文版本。
+
+ ![Personal Site](/post/literatureSearch/personalSite.png) 
+
+一些非官方资源网站提供了丰富的资料。例如，Sci-hub（https://sci-hub.tw/） 可以下载论文，Library genesis（http://gen.lib.rus.ec/） 可以下载电子书（主要是外文电子书），鸠摩搜索（https://www.jiumodiary.com/） 可以搜索下载中英文电子书，经管之家论坛可以搜索或发帖求索论文、电子书、软件等。
+
+最后，如果你实在下载不到论文、量表等资料，你可以直接给作者发邮件。虽不至100%，但你有机会得到作者的回复。给国外学者发邮件，最好使用国外的邮箱，否则容易被当成垃圾邮件。
+
+文献搜索是一项技能，而技能是通过练习获得的。祝各位好运！
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />本<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span>采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
