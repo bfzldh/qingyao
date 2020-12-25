@@ -1,0 +1,19 @@
+---
+title: "网盘分享"
+author: "Zhang Qingyao"
+date: "2020-12-25"
+series: ["Life"]
+categories: ["Application","Office"]
+tags: ["Application","Software","Office"]
+output: html_document
+---
+下面汇总了我通过网盘分享的一些资料。
+
+# 软件
+
+- [RStudio](https://www.rstudio.com/products/rstudio/download/), [百度云盘](https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA)[提取码：v54t]
+- EndNote Click插件(Kopernio插件), 可从Microsoft Edge、Firefox、Chrome浏览器应用商店下载。
+
+# 文件
+
+- 木铎金声PPT模板及源文件,[百度网盘](https://pan.baidu.com/s/1XgXCVN08jzW9iSKPHY4I_g)[提取码: fwf3]
