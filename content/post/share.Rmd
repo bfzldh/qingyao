@@ -11,12 +11,12 @@ output: html_document
 
 # 软件
 
-- [RStudio](https://www.rstudio.com/products/rstudio/download/), [百度网盘](https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA)[提取码:`v54t`]
+- [RStudio](https://www.rstudio.com/products/rstudio/download/)，[百度网盘](https://pan.baidu.com/s/18tdsap6FIXrW9AtV0BHZPA)[提取码:`v54t`]
 
 # 文件
 
 - 木铎金声PPT模板及源文件，[百度网盘](https://pan.baidu.com/s/1XgXCVN08jzW9iSKPHY4I_g)[提取码:`fwf3`]
-- Poster2.0模板,详细介绍见[《学术会议海报2.0》](https://yao.psych.pub/post/poster2.0/poster2.0/)一文，[百度网盘](https://pan.baidu.com/s/1nIqkbNB1KQQy526tJNh5QQ)[提取码:`rh3i`]
+- Poster2.0模板，详细介绍见[《学术会议海报2.0》](https://yao.psych.pub/post/poster2.0/poster2.0/)一文，[百度网盘](https://pan.baidu.com/s/1nIqkbNB1KQQy526tJNh5QQ)[提取码:`rh3i`]
 - 王济川《Structural equation modeling _ Applications using Mplus(2ed)》配套数据，[百度网盘](https://pan.baidu.com/s/1LN04BfxohkzG5GP0cVVDuw)[提取码:`p9i6`]
 - PROCESS macro模板文件，[百度网盘](https://pan.baidu.com/s/1SArTueI9HjfyTeQbBm91Bw)[提取码:`m325`]
 - 一些壁纸，[百度网盘](https://pan.baidu.com/s/1NRfE0iI9wnkDn5k4B-2ihg)[提取码:`psyc`]
