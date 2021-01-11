@@ -67,6 +67,7 @@ output: html_document
 
 # 图像
 - [GIMP](https://www.gimp.org)（媲美Photoshop）
+- [Inkscape](https://inkscape.org/)（免费的矢量图编辑软件）
 - 深度截图（CTRL+ALT+A）
 - 深度看图
 
