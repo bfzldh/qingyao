@@ -1,7 +1,7 @@
 ---
 title: "推荐给所有人的心理学书籍"
 author: "Qingyao Zhang"
-date: "2021-5-15"
+date: "2021-05-15"
 output: html_document
 series: ["Academy","Life"]
 categories: ["Book"]
