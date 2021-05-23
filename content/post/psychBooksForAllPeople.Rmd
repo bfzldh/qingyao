@@ -1,7 +1,7 @@
 ---
 title: "推荐给所有人的心理学书籍"
 author: "Qingyao Zhang"
-date: "2021-05-15"
+date: "2021-05-23"
 output: html_document
 series: ["Academy","Life"]
 categories: ["Book"]
@@ -10,21 +10,23 @@ tags: ["Life","ideal self"]
 
 # 前言
 
-每个人都在为理想的自我和生活而奋斗。心理学知识或许有助于该目标的实现。本文将为大家推荐一些与自我、生活息息相关的心理学书籍。推荐书籍的标准有三个：
-
-1. 我读过这本书。（尽管我在英文书籍信息下方的方括号中提供了中译版书籍的信息，但我可能只读过英文原版，而没有读过该中译版，因此我对该中译本的翻译水平持中立态度。）
-2. 我认为这本书有一定的心理科学依据，而不是伪心理学书。
-3. 我认为每个人都应该读一下这本书。
+每个人都在为理想的自我和生活而奋斗，心理学知识或许对此有帮助。本文将为大家推荐一些与生活紧密相关的心理学书籍。**科学性**是推荐下列书籍的重要参考标准之一。这本书须有一定的心理科学依据，而不是一本*伪*心理学书。基于该标准，以下推荐的部分书籍可能因专业性较强而难以理解。另外，由于语言差异，部分中文版也难以理解，建议阅读中文版书籍时参考英文原文。
 
 # 书籍
 
 以下是我按照不同的主题推荐的书籍：
 
+### 主题：校园欺凌
+
+**相近主题**：校园暴力，问题行为，学校管理，教师教育，同伴关系，儿童，青少年
+
+Rosen, L. H., Scott, S., Kim, S. Y. (2020). *Bullies, Victims, and Bystanders Understanding Child and Adult Participant Vantage Points*. Palgrave Macmillan. 
+
 ### 主题：坚毅 (Grit)
 
 **相近主题**：学习，生涯发展，职业规划
 
-Duckworth, A. (2016). Grit: The power of passion and perseverance. New York, NY: Scribner.
+Duckworth, A. (2016). Grit: The power of passion and perseverance. Scribner.
 
 [安杰拉 达克沃思. 坚毅：释放激情与坚持的力量. 中信出版社.]
 
@@ -42,5 +44,4 @@ Duckworth, A. (2016). Grit: The power of passion and perseverance. New York, NY:
 
 **相近主题**：自律，自控，自我管理，执行力，行动力
 
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">知识共享署名-禁止演绎 4.0 国际许可协议</a>进行许可。
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。
