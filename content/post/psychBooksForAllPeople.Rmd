@@ -5,7 +5,7 @@ date: "2021-05-23"
 output: html_document
 series: ["Academy","Life"]
 categories: ["Book"]
-tags: ["Life","ideal self"]
+tags: ["Life","Ideal self"]
 ---
 
 # 前言
