@@ -14,9 +14,11 @@ tags: ["Life","Ideal self"]
 
 # 书籍
 
-下文将按照不同的主题呈现所推荐的书籍：
+书籍将按照不同的主题予以分组，书籍信息将按照*APA格式*予以呈现。APA格式样例如下：
 
-### 主题：校园欺凌
+作者. (年份). *书籍标题*. 出版社名称.
+
+### 主题：校园欺凌（Bullying）
 
 **相近主题**：校园暴力，问题行为，学校管理，教师教育，家庭教养，同伴关系，儿童，青少年
 
@@ -26,9 +28,9 @@ Rosen, L. H., Scott, S., Kim, S. Y. (2020). *Bullies, Victims, and Bystanders: U
 
 **相近主题**：学习，生涯发展，职业规划
 
-Duckworth, A. (2016). Grit: The power of passion and perseverance. Scribner.
+Duckworth, A. (2016). *Grit: The power of passion and perseverance*. Scribner.
 
-[安杰拉 达克沃思. 坚毅：释放激情与坚持的力量. 中信出版社.]
+[达克沃思, 安杰拉. (2016). *坚毅：释放激情与坚持的力量*. 中信出版社.]
 
 ### 主题：刻意练习 (Deliberate Practice)
 
