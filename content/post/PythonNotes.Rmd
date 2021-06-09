@@ -1,0 +1,26 @@
+---
+title: "Python注解"
+author: "Qingyao Zhang"
+date: "2021-06-09"
+output: html_document
+---
+Python官方文档中时有难懂之处，本文对其部分内容略作注解。
+
+1. 正则表达式(Regular Expression)之`\number`
+
+```
+import re
+s = "It's a very good good idea"
+re.sub(r'(\b\w+) \1', r'\1', s)
+```
+上述命令中`\1`表示：重复前面第1对括号中表达式所匹配的内容。注意此时括号中无空格。最终，`'(\b\w+) \1'`匹配得到的字符串为`'good good'`。
+
+```
+re.sub(r'(\b\w+) (\b\w+)', r'\1', s)
+```
+上述命令中前后两个`(\b\w+)`所匹配的内容是不同的。最终，`'(\b\w+) (\b\w+)'`匹配得到的内容为`'good good idea'`。
+
+```
+re.sub(r'((\w+) )\1', r'\2', s)#
+```
+上述命令`\2`表示：重复前面第2对括号中表达式所匹配的内容。注意此时括号中有空格。

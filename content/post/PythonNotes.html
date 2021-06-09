@@ -1,0 +1,22 @@
+---
+title: "Python注解"
+author: "Qingyao Zhang"
+date: "2021-06-09"
+output: html_document
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Python官方文档中时有难懂之处，本文对其部分内容略作注解。</p>
+<ol style="list-style-type: decimal">
+<li>正则表达式(Regular Expression)之<code>\number</code></li>
+</ol>
+<pre><code>import re
+s = &quot;It&#39;s a very good good idea&quot;
+re.sub(r&#39;(\b\w+) \1&#39;, r&#39;\1&#39;, s)</code></pre>
+<p>上述命令中<code>\1</code>表示：重复前面第1对括号中表达式所匹配的内容。注意此时括号中无空格。最终，<code>'(\b\w+) \1'</code>匹配得到的字符串为<code>'good good'</code>。</p>
+<pre><code>re.sub(r&#39;(\b\w+) (\b\w+)&#39;, r&#39;\1&#39;, s)</code></pre>
+<p>上述命令中前后两个<code>(\b\w+)</code>所匹配的内容是不同的。最终，<code>'(\b\w+) (\b\w+)'</code>匹配得到的内容为<code>'good good idea'</code>。</p>
+<pre><code>re.sub(r&#39;((\w+) )\1&#39;, r&#39;\2&#39;, s)#</code></pre>
+<p>上述命令<code>\2</code>表示：重复前面第2对括号中表达式所匹配的内容。注意此时括号中有空格。</p>
