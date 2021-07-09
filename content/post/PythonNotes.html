@@ -25,7 +25,7 @@ re.sub(r&#39;(\b\w+) \1&#39;, r&#39;\1&#39;, s)</code></pre>
 re.sub(r&#39;(\b\w+) (\b\w+)&#39;, r&#39;\1&#39;, s)</code></pre>
 <p>上述命令在字符串s中总计匹配得到3组字符串：<code>'s a','very good','good idea'</code>。表达式中前后两个<code>(\b\w+)</code>匹配得到的内容（两个亚组）是不同的。最终，第1个亚组替换了整个组：‘s’替换了‘s a’，‘very’替换了‘very good’，‘good’替换了‘good idea’。</p>
 <pre><code>re.sub(r&#39;((\w+) )\1&#39;, r&#39;\2&#39;, s)</code></pre>
-<p>上述命令<code>\2</code>表示：重复前面第2对括号中表达式所匹配的内容。注意此时括号中有空格。</p>
+<p>上述命令<code>\2</code>表示第2个亚组，即第2对括号中表达式所匹配的内容（自左到右，第1个括号匹配第1个亚组，第2个括号匹配第2个亚组）。注意此时第1个亚组中有空格。</p>
 <ol start="2" style="list-style-type: decimal">
 <li><code>\</code></li>
 </ol>
@@ -34,10 +34,10 @@ re.sub(r&#39;(\b\w+) (\b\w+)&#39;, r&#39;\1&#39;, s)</code></pre>
 print(r&#39;b \b&#39;)</code></pre>
 <p>在上方的打印函数中，引号中的原始字符将被直接打印出来。我们可以使用<code>\</code>将原始字符转换为转义字符，例如<code>\b</code>将原始字符<code>b</code>转换为了退格（backspace；详见Python文档2.4.1）。如果想要让引号中的所有字符作为原始字符发挥作用(即让转义字符失效)，我们可以在引号前加上字符<code>r</code>或<code>R</code>。</p>
 <pre><code>re.sub(r&#39;\bg&#39;, r&#39;goooooo&#39;, s)</code></pre>
-<p>在上述命令中，引号前面有<code>r</code>声明了引号中为原始字符串，即引号中的<code>\b</code>不再是转义字符。但<code>re.sub()</code>将引号中的<code>\bg</code>识别为正则表达式，此时<code>\b</code>（boundary）作为元字符表示<code>\w</code>（<code>[a-zA-Z0-9_]）</code>与<code>\W</code>（<code>[^a-zA-Z0-9_]</code>）之间的边界，或<code>\w</code>与引号（<code>'</code>，<code>"</code>）之间的边界，而<code>\bg</code>表示所匹配的<code>g</code>的左侧无<code>[a-zA-Z0-9_]</code>这些字符（但可以有空格 ’ " - &amp; %等字符）。<code>s="It's a very good good idea"</code>是<code>re.sub()</code>操作的对象，<code>\bg</code>将匹配到两个<code>good</code>开头的<code>g</code>，因为<code>g</code>的左侧为空格（<code>g</code>属于<code>\w</code>，空格属于<code>\W</code>）。</p>
+<p>在上述命令中，引号前面有<code>r</code>声明了引号中为原始字符串，即引号中的<code>\b</code>不再是转义字符。但此时<code>re.sub()</code>将引号中的<code>\bg</code>识别为正则表达式，此时<code>\b</code>（boundary）作为元字符表示<code>\w</code>（<code>[a-zA-Z0-9_]）</code>与<code>\W</code>（<code>[^a-zA-Z0-9_]</code>）之间的边界，或<code>\w</code>与引号（<code>'</code>，<code>"</code>）之间的边界，而<code>\bg</code>表示所匹配的<code>g</code>的左侧无<code>[a-zA-Z0-9_]</code>这些字符（但可以有空格 ’ " - &amp; %等字符）。<code>s="It's a very good good idea"</code>是<code>re.sub()</code>操作的对象，因为<code>g</code>的左侧为空格（<code>g</code>属于<code>\w</code>，空格属于<code>\W</code>），<code>\bg</code>将匹配到两个<code>good</code>开头的<code>g</code>。</p>
 <p>但是，如果不用<code>r</code>声明原始字符串呢？那我们需要用<code>\\</code>声明元字符。即，</p>
 <pre><code>re.sub(&#39;\\bg&#39;, r&#39;goooooo&#39;, s)</code></pre>
-<p>可以将上述命令理解为使用<code>\</code>将<code>\</code>转义为普通字符，之后<code>\b</code>将被识别为元字符发挥作用。也可以看出，转义字符的优先级高于元字符。</p>
+<p>可以将上述命令理解为使用<code>\</code>将<code>\</code>转义为普通字符，之后<code>\b</code>将被识别为元字符发挥作用。由此可见，转义字符的优先级高于元字符。</p>
 <blockquote>
 <p>心情随笔：今天(2021-06-10)是个好日子。</p>
 </blockquote>
